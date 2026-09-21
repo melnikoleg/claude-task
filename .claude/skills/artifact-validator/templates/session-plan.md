@@ -1,7 +1,7 @@
 # Stargazing Session Plan - <run-id>
 
 ## Summary
-Four sentences: what, where, when, and the single thing that decides go or no-go.
+Four sentences: what, where, when, and the one thing that decides go or no-go.
 
 ## Site
 Name, coordinates, drive time, access notes, where to park and set up.
@@ -13,10 +13,10 @@ Dark window, moon, forecast numbers for the primary night. Backup night in one l
 | Local time | What happens | Notes |
 |---|---|---|
 
-From departure to pack-up, including dark adaptation and the observing slots.
+Departure to pack-up, including dark adaptation and the observing slots.
 
 ## Targets
-Ordered list matching the timeline, each with altitude and what to expect.
+Ordered to match the timeline, each with altitude and what to expect.
 
 ## Gear Checklist
 The night checklist, ready to tick off.

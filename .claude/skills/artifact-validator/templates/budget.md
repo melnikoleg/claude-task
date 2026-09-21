@@ -1,10 +1,10 @@
 # Budget - <run-id>
 
 ## Cost Breakdown
+Categories: travel, site fees, gear, food, contingency.
+
 | Category | Item | Qty | Unit cost | Subtotal | Basis |
 |---|---|---|---|---|---|
-
-Categories: travel, site fees, gear, food, contingency.
 
 ## Total
 | Field | Value |
@@ -18,4 +18,4 @@ Categories: travel, site fees, gear, food, contingency.
 Fuel price and consumption, distance used, exchange rate and its date.
 
 ## Sources
-- One URL per price. Fuel price must cite a dated source.
+- One URL per price. Fuel price cites a dated source.

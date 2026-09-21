@@ -1,16 +1,16 @@
 # Requirements - <run-id>
 
-One-paragraph restatement of what the observer asked for.
+One paragraph restating what the observer asked for.
 
 ## Observer Profile
 | Field | Value |
 |---|---|
-| Party | <count, ages, experience level> |
-| Mobility / constraints | <walking, cold tolerance, kids' bedtime, accessibility> |
+| Party | <count, ages, experience> |
+| Mobility / constraints | <walking, cold, bedtime, accessibility> |
 | Transport | <car / public transport / none> |
 
 ## Observing Mode
-`visual` or `astrophoto` - one only, plus one sentence on why.
+`visual` or `astrophoto`, one only, plus one sentence on why.
 
 ## Site
 | Field | Value |
@@ -22,13 +22,13 @@ One-paragraph restatement of what the observer asked for.
 | Timezone offset | UTC<+/-n> on the candidate dates |
 
 ## Candidate Nights
-List every evening date (YYYY-MM-DD) in scope, earliest first.
+Every evening date (YYYY-MM-DD) in scope, earliest first.
 
 ## Targets Requested
-Named targets the observer asked for, plus "open to suggestions" if stated.
+What the observer named, plus "open to suggestions" if stated.
 
 ## Owned Gear
-Everything the observer already has. Nothing here may be re-purchased later.
+Everything they already have. Nothing here may be re-purchased.
 
 ## Budget
 | Field | Value |
@@ -44,7 +44,7 @@ Everything the observer already has. Nothing here may be re-purchased later.
 | Max travel time one way | <minutes> |
 
 ## Assumptions
-Anything inferred rather than confirmed by the observer. Empty is fine; say "none".
+Anything inferred rather than confirmed. "None" is a valid answer.
 
 ## Sources
-- Geocoding / elevation MCP calls and any URL used to resolve locations.
+- Geocoding and elevation MCP calls, plus any URL used to resolve locations.
