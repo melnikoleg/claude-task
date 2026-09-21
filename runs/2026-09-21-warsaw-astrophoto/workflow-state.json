@@ -1,0 +1,288 @@
+{
+  "run_id": "2026-09-21-warsaw-astrophoto",
+  "status": "complete",
+  "created_at": "2026-09-21T13:01:48Z",
+  "updated_at": "2026-09-21T13:17:47Z",
+  "request": "Astrophoto night near Warsaw 16-18 Oct 2026, Andromeda + Milky Way",
+  "requirements_confirmed": true,
+  "plan": {
+    "mode": "astrophoto",
+    "site_fixed": false,
+    "stages": [
+      "requirements",
+      "groupA",
+      "groupB",
+      "groupC",
+      "groupD",
+      "validation",
+      "plan",
+      "approval",
+      "html"
+    ]
+  },
+  "stages": {
+    "requirements": {
+      "status": "done",
+      "attempts": 0,
+      "agents": [
+        "requirements-formalizer"
+      ],
+      "started_at": null,
+      "finished_at": "2026-09-21T13:03:15Z"
+    },
+    "groupA": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [
+        "site-scout",
+        "night-calculator"
+      ],
+      "started_at": "2026-09-21T13:03:17Z",
+      "finished_at": "2026-09-21T13:07:51Z"
+    },
+    "groupB": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [
+        "sky-forecaster",
+        "astrophoto-target-planner"
+      ],
+      "started_at": "2026-09-21T13:07:51Z",
+      "finished_at": "2026-09-21T13:09:58Z"
+    },
+    "groupC": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [
+        "gear-planner"
+      ],
+      "started_at": "2026-09-21T13:09:58Z",
+      "finished_at": "2026-09-21T13:11:44Z"
+    },
+    "groupD": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [
+        "budget-aggregator"
+      ],
+      "started_at": "2026-09-21T13:11:44Z",
+      "finished_at": "2026-09-21T13:12:53Z"
+    },
+    "validation": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [],
+      "started_at": "2026-09-21T13:12:53Z",
+      "finished_at": "2026-09-21T13:14:33Z"
+    },
+    "plan": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [],
+      "started_at": "2026-09-21T13:14:35Z",
+      "finished_at": "2026-09-21T13:15:52Z"
+    },
+    "approval": {
+      "status": "pending",
+      "attempts": 0,
+      "agents": [],
+      "started_at": null,
+      "finished_at": null
+    },
+    "html": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [],
+      "started_at": "2026-09-21T13:16:27Z",
+      "finished_at": "2026-09-21T13:17:40Z"
+    }
+  },
+  "artifacts": {
+    "input.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/input.md",
+      "sha256": "7c58c66e5797502efaa5d59be49c2599abb4347997a541bd44f3642a7cdd61be",
+      "updated_at": "2026-09-21T13:01:52Z",
+      "written_by": "coordinator"
+    },
+    "requirements.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/requirements.md",
+      "sha256": "22665698b512738dba97eda360a5a78f26c9e9ad2ec25206b096f07d291256ad",
+      "updated_at": "2026-09-21T13:02:38Z",
+      "written_by": "requirements-formalizer"
+    },
+    "night.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/night.md",
+      "sha256": "f392a56dc1dbf44e3d6531543f3959591af38f2897e349354f2809aaac91c3da",
+      "updated_at": "2026-09-21T13:04:09Z",
+      "written_by": "night-calculator"
+    },
+    "sites.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/sites.md",
+      "sha256": "c789eaf5d23fb68658e57a48c1241db8e3c65de050b419da0c06cc19f3bde940",
+      "updated_at": "2026-09-21T13:07:35Z",
+      "written_by": "site-scout"
+    },
+    "sky-forecast.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/sky-forecast.md",
+      "sha256": "1a33d4fd8ca9f139a9f6829f1eb378abb5be08b9738736fbc5354fda52b0d730",
+      "updated_at": "2026-09-21T13:09:20Z",
+      "written_by": "sky-forecaster"
+    },
+    "targets.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/targets.md",
+      "sha256": "0a8ea696e6c6f149ad7e25637dd55321c902bd6fb9fcdd1df92f099dff020031",
+      "updated_at": "2026-09-21T13:09:44Z",
+      "written_by": "astrophoto-target-planner"
+    },
+    "gear.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/gear.md",
+      "sha256": "2c8c39bf1b6126c466a4ecf8ffd53870ccf301c07e7b658a444c71307754e603",
+      "updated_at": "2026-09-21T13:11:32Z",
+      "written_by": "gear-planner"
+    },
+    "budget.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/budget.md",
+      "sha256": "1e5e5fdb211f023414ca73d182fe4197940da840cb01d54bfc1403a777f92835",
+      "updated_at": "2026-09-21T13:12:40Z",
+      "written_by": "budget-aggregator"
+    },
+    "report-1.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/validation/report-1.md",
+      "sha256": "9212dec4d6505863cd50b6ae0a253b945ed73f72ef4d95fcbdd14311189ad245",
+      "updated_at": "2026-09-21T13:14:29Z",
+      "written_by": "coordinator"
+    },
+    "session-plan.md": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/artifacts/session-plan.md",
+      "sha256": "4b6527aa8879fd240c8ca4fc2e41a10f7347f9aef394c9dd7459dbafe46d96d4",
+      "updated_at": "2026-09-21T13:15:42Z",
+      "written_by": "session-plan-builder"
+    },
+    "stargazing-guide.html": {
+      "path": "runs/2026-09-21-warsaw-astrophoto/stargazing-guide.html",
+      "sha256": "72f67f5df8fd50ec73d8733a7d02eb11d43f3dfaa571884aef6757530eef2827",
+      "updated_at": "2026-09-21T13:17:40Z",
+      "written_by": "html-builder"
+    }
+  },
+  "gates": [
+    {
+      "cycle": 1,
+      "gate": "G1",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G2",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G3",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G4",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G5",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G6",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G7",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G8",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G9",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G10",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G11",
+      "result": "PASS",
+      "affected": [
+        "artifacts"
+      ],
+      "finding": "see report-1.md",
+      "at": "2026-09-21T13:14:32Z"
+    }
+  ],
+  "validation_cycles": 1,
+  "approval": {
+    "status": "approved",
+    "plan_sha256": "4b6527aa8879fd240c8ca4fc2e41a10f7347f9aef394c9dd7459dbafe46d96d4",
+    "feedback": [],
+    "decided_at": "2026-09-21T13:16:25Z"
+  },
+  "mcp_calls": 27
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stargazing - Bolimowski Landscape Park, 2026-10-16</title>
+<style>
+  :root {
+    --bg: #070b18;
+    --panel: #0e1428;
+    --panel-2: #131b33;
+    --line: #26314f;
+    --text: #e8ecf7;
+    --muted: #9aa6c4;
+    --accent: #ffb454;      /* amber: the only bright colour, used sparingly */
+    --red: #ff6b5e;         /* red-light accent for warnings and no-go rules */
+    --ok: #6ee7a8;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background:
+      radial-gradient(1px 1px at 20% 12%, #fff9 50%, transparent 51%),
+      radial-gradient(1px 1px at 68% 8%, #fff7 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 84% 22%, #ffe9c8 50%, transparent 51%),
+      radial-gradient(1px 1px at 12% 34%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 46% 18%, #fff5 50%, transparent 51%),
+      linear-gradient(180deg, #0a1026 0%, var(--bg) 40%);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header { padding: 56px 0 28px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; }
+  .verdict {
+    display: inline-block; margin-top: 18px; padding: 8px 14px; border-radius: 999px;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--line); background: var(--panel-2);
+  }
+  .verdict.go { color: var(--ok); border-color: #2c5c45; }
+  .verdict.nogo { color: var(--red); border-color: #5c2f2c; }
+  section { margin: 0 0 32px; }
+  h2 {
+    font-size: 1.15rem; margin: 0 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--line); color: var(--accent); letter-spacing: 0.02em;
+  }
+  h3 { font-size: 1rem; margin: 22px 0 8px; }
+  p, li { color: var(--text); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .stat .k { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat .v { font-size: 1.3rem; font-weight: 650; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 0.94rem; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  tbody tr:hover { background: var(--panel-2); }
+  ul, ol { padding-left: 22px; }
+  .check { list-style: none; padding-left: 0; }
+  .check li { padding-left: 28px; position: relative; margin-bottom: 6px; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 5px; width: 15px; height: 15px;
+    border: 1px solid var(--line); border-radius: 4px; background: var(--panel-2);
+  }
+  .warn { border-left: 3px solid var(--red); padding-left: 14px; color: #ffd9d4; }
+  a { color: var(--accent); }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  footer ul { font-size: 0.82rem; }
+  @media print {
+    body { background: #fff; color: #111; }
+    .card, .stat { background: #fff; border-color: #ccc; }
+    h2 { color: #111; }
+    a { color: #111; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stargazing - Bolimowski Landscape Park, 2026-10-16</h1>
+    <p class="sub">Two adults, astrophoto mode (Canon R6 + 24mm f/1.8, untracked), 59 min drive from Warsaw, dark window 19:32-05:11 local (UTC+2)</p>
+    <span class="verdict go">PROVISIONAL GO - 2026-10-16 (backup 2026-10-17)</span>
+  </header>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <div class="card"><p>Two adults drive from Warsaw to Bolimowski Landscape Park farmland edge (near Puszcza
+Mariańska/Bolimów), an estimated 59 minutes one way, to photograph the Andromeda
+Galaxy (M31) with a Canon R6, 24mm f/1.8 lens and tripod (no tracker), on the night of
+<strong>2026-10-16</strong> (primary) or <strong>2026-10-17</strong> (backup). The Milky Way core, also
+requested, is not observable from Warsaw's latitude in October - see Targets below -
+so M31 is the sole imaging target. The plan is darkness- and moon-good on both
+candidate nights, but the sky/weather verdict is <strong>provisional, not a confirmed GO</strong>:
+Open-Meteo's forecast horizon does not yet reach these dates, so cloud cover must be
+rechecked before departure (see Go/No-Go).</p></div>
+    <div class="grid" style="margin-top:14px">
+      <div class="stat"><div class="k">Dark window</div><div class="v">19:32-05:11 (9.65 h)</div></div>
+      <div class="stat"><div class="k">Moon illumination</div><div class="v">33.9% waxing crescent</div></div>
+      <div class="stat"><div class="k">Cloud forecast</div><div class="v">N/A - beyond horizon</div></div>
+      <div class="stat"><div class="k">Drive time</div><div class="v">59 min one way</div></div>
+      <div class="stat"><div class="k">Total cost</div><div class="v">34.42 EUR / 150 EUR limit</div></div>
+      <div class="stat"><div class="k">Targets</div><div class="v">1 (M31)</div></div>
+    </div>
+  </section>
+
+  <section id="site"><h2>Site</h2>
+    <div class="card">
+      <p><strong>Bolimowski Landscape Park farmland edge</strong> (near Puszcza Mariańska/Bolimów).</p>
+      <ul>
+        <li>Coordinates: lat 51.97901, lon 20.35037, elevation 137 m</li>
+        <li>Estimated drive: 59 minutes one way (53.1 km straight-line, road factor 1.3x at 70 km/h), well inside the 90-minute limit</li>
+        <li>Estimated Bortle ~4 (rural, ~53 km from Warsaw's centre, outside the city's light dome; not a measured SQM reading - treat as an estimate)</li>
+        <li>Access: public roads run through the landscape park, open to traffic and parking at all hours; no entry fee, no gate. Landscape parks (unlike national parks) do not confine visitors to marked trails. Stay off marked hiking trails and out of the Puszcza Mariańska nature reserve within the park, where off-trail movement is restricted.</li>
+        <li>Horizon: forest alternates with farmland and river-valley clearings; use an open agricultural field on the park's edge, not a forest clearing. The exact field was not scouted in person - arrive before dark to confirm a clear horizon and legal parking.</li>
+        <li>Facilities: none on site; nearest fuel/toilets in Żyrardów or Skierniewice, a short drive away</li>
+        <li>Backup site: Chrosna farmland, south of Celestynów (lat 52.0382, lon 21.45781), 41 minutes one way, Bortle ~5, tree-screened from Chrosna's railway station lighting. Park on the road verge without blocking farm access.</li>
+      </ul>
+      <div class="warn">Risk noted by site-scout: October evenings can bring ground fog in the Rawka river valley near this site - check local fog risk on the night.</div>
+    </div>
+  </section>
+
+  <section id="night-and-sky"><h2>Night and Sky</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Primary: 2026-10-16</th><th>Backup: 2026-10-17</th></tr></thead>
+      <tbody>
+        <tr><td>Dark window (local, UTC+2)</td><td>19:32-05:11 (9.65 h)</td><td>19:30-05:12 (9.71 h)</td></tr>
+        <tr><td>Moon</td><td>waxing crescent, 33.9% illum, moonset 20:15, up only ~7% of window (max alt 3 deg)</td><td>waxing crescent, 43.1% illum, moonset 21:20, up ~20% of window (max alt 7.9 deg)</td></tr>
+        <tr><td>Darkness/moon verdict</td><td>good (best of the three candidate nights)</td><td>good (second-best)</td></tr>
+        <tr><td>Cloud forecast</td><td><strong>N/A - beyond Open-Meteo's forecast horizon</strong> (tops out 2026-10-06, 10 days short of this night)</td><td><strong>N/A - same horizon limit</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="card">
+      <p><strong>Sky verdict is provisional, not a confirmed GO.</strong> No cloud, wind, temperature or
+dew-point numbers exist yet for either night. Recheck schedule:</p>
+      <ul>
+        <li>From ~2026-10-01: first indicative (7-16 day range) numbers for 2026-10-16, low confidence trend only.</li>
+        <li>From ~2026-10-09 (7 days before the earliest night): numbers become moderately reliable.</li>
+        <li>24 hours before the chosen night: final go/no-go check, mandatory regardless of horizon.</li>
+      </ul>
+      <p>Named pairing: <strong>Site 1 (Bolimowski Landscape Park) / night 2026-10-16 primary</strong>,
+<strong>night 2026-10-17 backup at the same site</strong> (Chrosna is the fallback site if driving
+further to Site 1 is undesirable - see Site section).</p>
+    </div>
+  </section>
+
+  <section id="timeline"><h2>Timeline</h2>
+    <table>
+      <thead><tr><th>Local time</th><th>What happens</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>17:55</td><td>Leave home (Warsaw)</td><td>Allow the full 59 min estimated drive plus margin</td></tr>
+        <tr><td>~18:55</td><td>Arrive at Bolimowski Landscape Park farmland edge</td><td>Still residual twilight; confirm the field, horizon and legal parking before dark</td></tr>
+        <tr><td>19:00-19:30</td><td>Set up</td><td>Level tripod, mount R6, focus to infinity via live-view on a bright star/distant light, test frames, frame M31 against Cassiopeia</td></tr>
+        <tr><td>19:32</td><td>Dark window opens</td><td>M31 already at 47.7 deg altitude - usable immediately</td></tr>
+        <tr><td>19:40-04:30</td><td>M31 imaging sequence</td><td>80-120 x 10 s subs, ISO 3200, f/1.8, shot in 2-3 sittings either side of transit; see Targets</td></tr>
+        <tr><td>22:30-00:30</td><td>Transit window</td><td>M31 at its highest, 79.4 deg at 23:34 - tightest framing, least atmospheric extinction</td></tr>
+        <tr><td>whenever composition suits</td><td>Optional wide starfield/nightscape frames</td><td>Spare time only; not the Milky Way core (unobservable - see Targets)</td></tr>
+        <tr><td>after light frames, on site or at home</td><td>Calibration frames: darks, flats, bias</td><td>Darks at same temp/settings; flats at dawn twilight or lit screen before breaking down tripod; bias any time</td></tr>
+        <tr><td>04:30-05:00</td><td>Pack down</td><td>Ahead of the 05:11 dark-window end, with margin before driving home</td></tr>
+        <tr><td>~05:00</td><td>Leave site</td><td></td></tr>
+        <tr><td>~06:00</td><td>Arrive home</td><td>Both adults tired after an all-night session - see Safety</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="targets"><h2>Targets</h2>
+    <div class="card">
+      <h3>Andromeda Galaxy (M31)</h3>
+      <ul>
+        <li>Magnitude 3.4; max altitude 79.4 deg at 23:34 local (2026-10-16 transit), 79.4 deg at 23:32 (2026-10-17 transit)</li>
+        <li>Above 20 deg for 9.67 h on 2026-10-16 (essentially the whole dark window) and 10.0 h on 2026-10-17</li>
+        <li>Exposure: 24mm f/1.8, R6 (5.98 micron pixel pitch), untracked - NPF rule gives 10 s max, ISO 3200, f/1.8. Shoot 80-120 subs (~15-20 min stacked integration) plus calibration frames</li>
+        <li>At 24mm, M31 (roughly 3 x 1 deg) fills under 5% of the 74 x 53 deg frame - a small, soft, elongated grey smudge with a brighter core in a wide starfield next to Cassiopeia, not a close-up of the galaxy's disc or dust lanes</li>
+      </ul>
+      <h3>Milky Way core - not a target this session</h3>
+      <p>Requested by the observer, but geometrically unobservable from Warsaw's latitude (52
+deg N) in October: <code>mcp__astro__object_visibility</code> for the galactic core returns a max
+altitude of only 0.9 deg at 19:34 local on 2026-10-16 and 0.7 deg on 2026-10-17, with
+0 hours above the 20-degree usability threshold on both nights. This is a seasonal
+effect, not a site or weather problem - the core sets with the Sun in mid-autumn and
+will not return to a useful evening altitude until spring. No site choice or clear sky
+fixes this. The fainter northern Milky Way band (through Cassiopeia, Perseus, Cygnus)
+is above the horizon and may be naked-eye visible at this dark site, but it is not a
+tracked catalog object and is not planned as an imaging target.</p>
+    </div>
+  </section>
+
+  <section id="gear"><h2>Gear Checklist</h2>
+    <div class="card">
+      <p>All gear owned; checklist-only mode (no purchases, 0 EUR gear spend).</p>
+      <h3>Optics</h3>
+      <ul class="check">
+        <li>Canon R6 + 24mm f/1.8 lens on the tripod, leveled at setup</li>
+        <li>Lens hood if owned</li>
+        <li>Microfiber lens cloth (check for dew every 20-30 min - not a confirmed forecast trigger, but standard October precaution)</li>
+        <li>Memory card(s) with room for 150-200+ RAW frames plus a spare</li>
+      </ul>
+      <h3>Power</h3>
+      <ul class="check">
+        <li>Fully charged battery, installed</li>
+        <li>Keep it in an inner jacket pocket between shooting blocks (cold roughly halves lithium-ion life per ~10 C drop)</li>
+        <li>Minimize chimping/live-view to stretch the single battery across ~9.5 h (no spare battery budgeted)</li>
+        <li>Phone charged for navigation, red-light backup and the night-before weather recheck</li>
+      </ul>
+      <h3>Warmth</h3>
+      <ul class="check">
+        <li>Layered clothing (base, insulating mid, windproof/waterproof outer)</li>
+        <li>Hat, gloves (touchscreen-compatible), insulated boots</li>
+        <li>Hot drink in a thermos for both adults</li>
+      </ul>
+      <h3>Safety</h3>
+      <ul class="check">
+        <li>Red-light headlamp</li>
+        <li>Phone charged and carried, check signal on arrival</li>
+        <li>Basic first-aid if normally carried in the car</li>
+      </ul>
+      <h3>Comfort</h3>
+      <ul class="check">
+        <li>Camp chair or folding stool</li>
+        <li>Snacks for both adults across the ~9.5 h session</li>
+        <li>Compass/star app for orientation at setup if not using the phone</li>
+      </ul>
+      <p>No gaps: remote shutter release is not needed (10 s exposures fire via the R6's
+built-in 2-second self-timer plus continuous drive) and a spare battery is handled by
+the conservation workaround above, not a purchase.</p>
+    </div>
+  </section>
+
+  <section id="budget"><h2>Budget</h2>
+    <table>
+      <thead><tr><th>Category</th><th>Item</th><th>Subtotal</th></tr></thead>
+      <tbody>
+        <tr><td>Travel</td><td>Petrol, Skoda Octavia, 137.67 km round trip, 8.95 L @ 1.82 EUR/L</td><td>16.29 EUR</td></tr>
+        <tr><td>Site fees</td><td>Bolimowski Landscape Park, public-road access</td><td>0.00 EUR</td></tr>
+        <tr><td>Gear</td><td>All owned, no purchases</td><td>0.00 EUR</td></tr>
+        <tr><td>Food and drink</td><td>Coffee/snacks/packed meal, 2 adults, ~9.5 h</td><td>15.00 EUR</td></tr>
+        <tr><td>Contingency</td><td>10% of 31.29 EUR subtotal, rounded up</td><td>3.13 EUR</td></tr>
+      </tbody>
+    </table>
+    <div class="card"><p><strong>Total: 34.42 EUR</strong> against a <strong>150 EUR limit</strong> - <strong>115.58 EUR headroom</strong>. Within
+limit: yes.</p></div>
+  </section>
+
+  <section id="go-no-go"><h2>Go / No-Go</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Threshold</th><th>Call it at</th></tr></thead>
+      <tbody>
+        <tr><td>Cloud cover in dark window (recheck)</td><td>&gt; 40% mean cloud cover forecast for the dark window fails the check</td><td>24 hours before the chosen night, mandatory (earlier indicative checks from ~2026-10-01, moderately reliable from ~2026-10-09)</td></tr>
+        <tr><td>Moon</td><td>Already checked and good on both candidate nights (33.9% / 43.1% illum, moon sets within the first 1-3 h)</td><td>No further action needed</td></tr>
+        <tr><td>Site legality/horizon</td><td>Confirm the chosen field is legally parked and gives a clear horizon</td><td>On arrival, before dark</td></tr>
+        <tr><td>Dew</td><td>Front element dewing over during the session</td><td>Continuous - wipe every 20-30 min; abort imaging for that stretch if dew recurs faster than it can be cleared</td></tr>
+      </tbody>
+    </table>
+    <div class="warn"><strong>Rule</strong>: if forecast cloud cover for the dark window exceeds 40% on the 24-hour
+check for 2026-10-16, fall back to 2026-10-17 at the same site (or Chrosna, the
+shorter-drive backup site). If both nights exceed 40% cloud, postpone the session -
+do not drive out on a night the artifacts cannot confirm as clear. This plan is a
+<strong>provisional GO</strong> pending that check, not a confirmed one.</div>
+  </section>
+
+  <section id="safety"><h2>Safety</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Cold</strong>: October overnight sessions in open farmland run well past midnight; dress in layers, keep a hot drink, and watch each other for signs of cold exposure over the ~9.5 h session.</li>
+        <li><strong>Drive home while tired</strong>: departure is after an all-night session (~05:00-06:00 arrival home); if either driver is too tired to drive safely, rest at the site or swap drivers before setting off.</li>
+        <li><strong>Isolation</strong>: the site has no facilities and no other people expected nearby; check phone signal on arrival, since it is the primary way to call for help or recheck weather.</li>
+        <li><strong>Tell someone</strong>: let a third party know the site, the night, and the expected return time before leaving home.</li>
+        <li><strong>Wildlife/terrain</strong>: farmland/forest-edge park at night - stay on public roads and out of the Puszcza Mariańska nature reserve; watch footing in the dark away from the vehicle.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Sources</strong>
+    <h3>requirements.md</h3>
+    <ul>
+      <li>mcp__open-meteo__geocoding(name="Warsaw", countryCode="PL")</li>
+      <li>mcp__open-meteo__elevation(latitude=52.22977, longitude=21.01178)</li>
+      <li><a href="https://www.timeanddate.com/time/change/poland/warsaw?year=2026">https://www.timeanddate.com/time/change/poland/warsaw?year=2026</a></li>
+    </ul>
+    <h3>sites.md</h3>
+    <ul>
+      <li><a href="https://www.astromaniak.pl/viewtopic.php?f=3&t=28861">https://www.astromaniak.pl/viewtopic.php?f=3&t=28861</a></li>
+      <li><a href="https://astropolis.pl/topic/26777-miejsca-do-ogladania-ciemnego-nieba/">https://astropolis.pl/topic/26777-miejsca-do-ogladania-ciemnego-nieba/</a></li>
+      <li><a href="https://triverna.pl/blog/astroturystyka-w-polsce">https://triverna.pl/blog/astroturystyka-w-polsce</a></li>
+      <li><a href="https://pl.wikipedia.org/wiki/Bolimowski_Park_Krajobrazowy">https://pl.wikipedia.org/wiki/Bolimowski_Park_Krajobrazowy</a></li>
+      <li><a href="https://parkilodzkie.pl/bpk">https://parkilodzkie.pl/bpk</a></li>
+      <li><a href="https://www.skalnik.pl/blog/parki-narodowe-zasady/">https://www.skalnik.pl/blog/parki-narodowe-zasady/</a></li>
+      <li>mcp__open-meteo__geocoding(name="Nieporęt", countryCode="PL")</li>
+      <li>mcp__open-meteo__geocoding(name="Chrosna, Celestynów", countryCode="PL")</li>
+      <li>mcp__open-meteo__geocoding(name="Puszcza Mariańska", countryCode="PL")</li>
+      <li>mcp__open-meteo__elevation(latitude=[52.43152, 52.0382], longitude=[21.03212, 21.45781])</li>
+    </ul>
+    <h3>night.md</h3>
+    <ul>
+      <li>mcp__astro__dark_window / mcp__astro__moon_info for 2026-10-16, 2026-10-17, 2026-10-18</li>
+      <li><a href="https://www.timeanddate.com/time/change/poland/warsaw?year=2026">https://www.timeanddate.com/time/change/poland/warsaw?year=2026</a></li>
+    </ul>
+    <h3>sky-forecast.md</h3>
+    <ul>
+      <li>mcp__open-meteo__weather_forecast(...start_date="2026-10-16"...) - rejected, out of allowed range</li>
+      <li>mcp__open-meteo__weather_forecast(...forecast_days=16...) - confirmed horizon to 2026-10-07</li>
+      <li><a href="https://open-meteo.com/en/docs">https://open-meteo.com/en/docs</a></li>
+    </ul>
+    <h3>targets.md</h3>
+    <ul>
+      <li>mcp__astro__list_catalog()</li>
+      <li>mcp__astro__object_visibility(object_name="M31", date="2026-10-16" / "2026-10-17")</li>
+      <li>mcp__astro__object_visibility(object_name="MILKY WAY CORE", date="2026-10-16" / "2026-10-17")</li>
+      <li><a href="https://photographylife.com/500-rule-vs-npf-rule">https://photographylife.com/500-rule-vs-npf-rule</a></li>
+      <li><a href="https://www.photopills.com/articles/milky-way-photography-settings">https://www.photopills.com/articles/milky-way-photography-settings</a></li>
+      <li><a href="https://astrobackyard.com/photographing-the-andromeda-galaxy/">https://astrobackyard.com/photographing-the-andromeda-galaxy/</a></li>
+    </ul>
+    <h3>gear.md</h3>
+    <ul>
+      <li><a href="https://www.slrlounge.com/cold-weather-photography-tips-how-to-protect-your-batteries-from-the-cold/">https://www.slrlounge.com/cold-weather-photography-tips-how-to-protect-your-batteries-from-the-cold/</a></li>
+    </ul>
+    <h3>budget.md</h3>
+    <ul>
+      <li><a href="https://www.globalpetrolprices.com/Poland/gasoline_prices/">https://www.globalpetrolprices.com/Poland/gasoline_prices/</a></li>
+      <li><a href="https://www.fuel-prices.eu/Poland/">https://www.fuel-prices.eu/Poland/</a></li>
+      <li><a href="https://www.globalconvenience.com/features/polish-retail-leader-zabka-launches-coffee-subscription-program/">https://www.globalconvenience.com/features/polish-retail-leader-zabka-launches-coffee-subscription-program/</a></li>
+      <li><a href="https://www.exchangerates.org.uk/EUR-PLN-exchange-rate-history.html">https://www.exchangerates.org.uk/EUR-PLN-exchange-rate-history.html</a></li>
+    </ul>
+    <p>Run id: 2026-09-21-warsaw-astrophoto. Generated 2026-09-21. Cloud forecast was out of Open-Meteo's horizon at plan time - recheck cloud cover before departure per the Go/No-Go schedule above.</p>
+  </footer>
+</div>
+</body>
+</html>

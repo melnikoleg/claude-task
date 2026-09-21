@@ -1,0 +1,27 @@
+{"at": "2026-09-21T13:02:05Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Warsaw Mokot\u00f3w", "countryCode": "PL"}, "agent": "requirements-formalizer"}
+{"at": "2026-09-21T13:02:07Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Mokotow, Warsaw"}, "agent": "requirements-formalizer"}
+{"at": "2026-09-21T13:02:07Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Warsaw", "countryCode": "PL"}, "agent": "requirements-formalizer"}
+{"at": "2026-09-21T13:02:11Z", "tool": "mcp__open-meteo__elevation", "args": {"latitude": 52.22977, "longitude": 21.01178}, "agent": "requirements-formalizer"}
+{"at": "2026-09-21T13:03:32Z", "tool": "mcp__astro__dark_window", "args": {"lat": 52.22977, "lon": 21.01178, "date": "2026-10-16", "tz_offset_hours": 2, "elevation_m": 113}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:03:33Z", "tool": "mcp__astro__moon_info", "args": {"lat": 52.22977, "lon": 21.01178, "date": "2026-10-16", "tz_offset_hours": 2, "elevation_m": 113}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:03:34Z", "tool": "mcp__astro__dark_window", "args": {"lat": 52.22977, "lon": 21.01178, "date": "2026-10-17", "tz_offset_hours": 2, "elevation_m": 113}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:03:34Z", "tool": "mcp__astro__moon_info", "args": {"lat": 52.22977, "lon": 21.01178, "date": "2026-10-17", "tz_offset_hours": 2, "elevation_m": 113}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:03:35Z", "tool": "mcp__astro__dark_window", "args": {"lat": 52.22977, "lon": 21.01178, "date": "2026-10-18", "tz_offset_hours": 2, "elevation_m": 113}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:03:36Z", "tool": "mcp__astro__moon_info", "args": {"lat": 52.22977, "lon": 21.01178, "date": "2026-10-18", "tz_offset_hours": 2, "elevation_m": 113}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:04:17Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Bia\u0142obrzegi, Niepor\u0119t", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:04:17Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Chrosna, Celestyn\u00f3w", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:04:17Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Wyszogr\u00f3d", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:04:35Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Niepor\u0119t", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:04:35Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Celestyn\u00f3w", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:04:36Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Nowy Dw\u00f3r Mazowiecki", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:04:54Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Chrosna", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:04:54Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Wierzbica, Legionowo County", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:05:03Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Puszcza Maria\u0144ska", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:05:04Z", "tool": "mcp__open-meteo__elevation", "args": {"latitude": [52.43152, 52.0382], "longitude": [21.03212, 21.45781]}, "agent": "site-scout"}
+{"at": "2026-09-21T13:06:35Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Broch\u00f3w, Sochaczew", "countryCode": "PL"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:08:09Z", "tool": "mcp__astro__list_catalog", "args": {}, "agent": "astrophoto-target-planner"}
+{"at": "2026-09-21T13:08:13Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 51.97901, "lon": 20.35037, "date": "2026-10-16", "object_name": "M31", "tz_offset_hours": 2, "elevation_m": 137}, "agent": "astrophoto-target-planner"}
+{"at": "2026-09-21T13:08:14Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 51.97901, "lon": 20.35037, "date": "2026-10-16", "object_name": "MILKY WAY CORE", "tz_offset_hours": 2, "elevation_m": 137}, "agent": "astrophoto-target-planner"}
+{"at": "2026-09-21T13:08:14Z", "tool": "mcp__open-meteo__weather_forecast", "args": {"latitude": 51.97901, "longitude": 20.35037, "hourly": ["cloud_cover", "cloud_cover_low", "cloud_cover_mid", "cloud_cover_high", "precipitation_probability", "wind_speed_10m", "temperature_2m", "dew_point_2m", "relative_humidity_2m"], "forecast_days": 16, "timezone": "Europe/Warsaw", "wind_speed_unit": "ms"}, "agent": "sky-forecaster"}
+{"at": "2026-09-21T13:08:15Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 51.97901, "lon": 20.35037, "date": "2026-10-17", "object_name": "M31", "tz_offset_hours": 2, "elevation_m": 137}, "agent": "astrophoto-target-planner"}
+{"at": "2026-09-21T13:08:16Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 51.97901, "lon": 20.35037, "date": "2026-10-17", "object_name": "MILKY WAY CORE", "tz_offset_hours": 2, "elevation_m": 137}, "agent": "astrophoto-target-planner"}

@@ -118,6 +118,7 @@ validation reports, state and final guide.
 |---|---|
 | `claude mcp list` shows astro failed | run `uv run --script mcp/astro_server.py` directly; the first run downloads `ephem` |
 | `open-meteo` failed | check network, then `npx -y -p open-meteo-mcp-server open-meteo-mcp-server` |
+| `open-meteo` fails with a TLS or certificate error | you are behind a TLS-intercepting proxy. Export `NODE_EXTRA_CA_CERTS=/path/to/ca-bundle.pem` before starting Claude Code; `.mcp.json` passes it to the server. On macOS the intercepting root usually lives in the System keychain: `security find-certificate -a -c "<CA name>" -p /Library/Keychains/System.keychain > ca-bundle.pem` |
 | Writing the guide is denied | the plan is not approved, or it changed after approval; approve the current version |
 | An agent cannot write its artifact | it is missing `## Sources` with a URL, or still contains `TODO` |
 | State looks wrong | `python3 scripts/state.py show <run-id>`; never edit the JSON by hand, the hook blocks it |

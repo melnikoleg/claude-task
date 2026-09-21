@@ -147,8 +147,9 @@ Mandatory, and the hook enforces it independently of anything you say here.
    night, dark window, targets, total cost, and the single biggest risk.
 2. `AskUserQuestion`: "Approve this plan and generate the guide?" with options
    **Approve** and **Request changes**.
-3. Approve: `python3 scripts/state.py approve <run-id>` - this stores a hash of the
-   exact plan file. Continue.
+3. Approve: `python3 scripts/state.py approve <run-id>` followed by
+   `python3 scripts/state.py stage <run-id> approval done`. The first stores a hash of
+   the exact plan file. Continue.
 4. Request changes: capture their feedback verbatim,
    `python3 scripts/state.py reject <run-id> --feedback "<verbatim>"`, map the feedback
    to the owning agents, re-run only those, regenerate the downstream artifacts, re-run

@@ -3,12 +3,25 @@
     "open-meteo": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "-p", "open-meteo-mcp-server", "open-meteo-mcp-server"]
+      "args": [
+        "-y",
+        "-p",
+        "open-meteo-mcp-server",
+        "open-meteo-mcp-server"
+      ],
+      "env": {
+        "NODE_EXTRA_CA_CERTS": "${NODE_EXTRA_CA_CERTS:-/dev/null}"
+      }
     },
     "astro": {
       "type": "stdio",
       "command": "uv",
-      "args": ["run", "--quiet", "--script", "mcp/astro_server.py"]
+      "args": [
+        "run",
+        "--quiet",
+        "--script",
+        "mcp/astro_server.py"
+      ]
     }
   }
 }
