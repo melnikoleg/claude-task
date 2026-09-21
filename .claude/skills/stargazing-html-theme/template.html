@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<style>
+  :root {
+    --bg: #070b18;
+    --panel: #0e1428;
+    --panel-2: #131b33;
+    --line: #26314f;
+    --text: #e8ecf7;
+    --muted: #9aa6c4;
+    --accent: #ffb454;      /* amber: the only bright colour, used sparingly */
+    --red: #ff6b5e;         /* red-light accent for warnings and no-go rules */
+    --ok: #6ee7a8;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background:
+      radial-gradient(1px 1px at 20% 12%, #fff9 50%, transparent 51%),
+      radial-gradient(1px 1px at 68% 8%, #fff7 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 84% 22%, #ffe9c8 50%, transparent 51%),
+      radial-gradient(1px 1px at 12% 34%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 46% 18%, #fff5 50%, transparent 51%),
+      linear-gradient(180deg, #0a1026 0%, var(--bg) 40%);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header { padding: 56px 0 28px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; }
+  .verdict {
+    display: inline-block; margin-top: 18px; padding: 8px 14px; border-radius: 999px;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--line); background: var(--panel-2);
+  }
+  .verdict.go { color: var(--ok); border-color: #2c5c45; }
+  .verdict.nogo { color: var(--red); border-color: #5c2f2c; }
+  section { margin: 0 0 32px; }
+  h2 {
+    font-size: 1.15rem; margin: 0 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--line); color: var(--accent); letter-spacing: 0.02em;
+  }
+  h3 { font-size: 1rem; margin: 22px 0 8px; }
+  p, li { color: var(--text); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .stat .k { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat .v { font-size: 1.3rem; font-weight: 650; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 0.94rem; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  tbody tr:hover { background: var(--panel-2); }
+  ul, ol { padding-left: 22px; }
+  .check { list-style: none; padding-left: 0; }
+  .check li { padding-left: 28px; position: relative; margin-bottom: 6px; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 5px; width: 15px; height: 15px;
+    border: 1px solid var(--line); border-radius: 4px; background: var(--panel-2);
+  }
+  .warn { border-left: 3px solid var(--red); padding-left: 14px; color: #ffd9d4; }
+  a { color: var(--accent); }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  footer ul { font-size: 0.82rem; }
+  @media print {
+    body { background: #fff; color: #111; }
+    .card, .stat { background: #fff; border-color: #ccc; }
+    h2 { color: #111; }
+    a { color: #111; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>{{TITLE}}</h1>
+    <p class="sub">{{SUBTITLE}}</p>
+    <span class="verdict {{VERDICT_CLASS}}">{{VERDICT}}</span>
+  </header>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <div class="card">{{SUMMARY}}</div>
+    <div class="grid" style="margin-top:14px">{{KEY_STATS}}</div>
+  </section>
+
+  <section id="site"><h2>Site</h2>{{SITE}}</section>
+  <section id="night-and-sky"><h2>Night and Sky</h2>{{NIGHT_AND_SKY}}</section>
+  <section id="timeline"><h2>Timeline</h2>{{TIMELINE}}</section>
+  <section id="targets"><h2>Targets</h2>{{TARGETS}}</section>
+  <section id="gear"><h2>Gear Checklist</h2>{{GEAR}}</section>
+  <section id="budget"><h2>Budget</h2>{{BUDGET}}</section>
+  <section id="go-no-go"><h2>Go / No-Go</h2>{{GO_NO_GO}}</section>
+  <section id="safety"><h2>Safety</h2>{{SAFETY}}</section>
+
+  <footer>
+    <strong>Sources</strong>
+    {{SOURCES}}
+    <p>{{FOOTER_NOTE}}</p>
+  </footer>
+</div>
+</body>
+</html>
