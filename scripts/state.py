@@ -23,6 +23,8 @@ RUNS = ROOT / "runs"
 
 STAGE_STATUSES = ("pending", "running", "done", "failed", "blocked", "skipped")
 
+NEW_STAGE = {"status": "pending", "attempts": 0, "agents": [], "started_at": None, "finished_at": None}
+
 
 def now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -82,7 +84,6 @@ def cmd_init(a) -> None:
             "created_at": now(),
             "updated_at": now(),
             "request": a.request,
-            "requirements_confirmed": False,
             "plan": {"mode": None, "site_fixed": None, "stages": []},
             "stages": {},
             "artifacts": {},
@@ -99,11 +100,8 @@ def cmd_plan(a) -> None:
     s = load(a.run_id)
     stages = [x.strip() for x in a.stages.split(",") if x.strip()]
     s["plan"] = {"mode": a.mode, "site_fixed": a.site_fixed, "stages": stages}
-    s["requirements_confirmed"] = True
     for name in stages:
-        s["stages"].setdefault(
-            name, {"status": "pending", "attempts": 0, "agents": [], "started_at": None, "finished_at": None}
-        )
+        s["stages"].setdefault(name, dict(NEW_STAGE))
     save(s)
     print(f"plan stored: {' -> '.join(stages)}")
 
@@ -112,9 +110,7 @@ def cmd_stage(a) -> None:
     s = load(a.run_id)
     if a.status not in STAGE_STATUSES:
         sys.exit(f"status must be one of {', '.join(STAGE_STATUSES)}")
-    st = s["stages"].setdefault(
-        a.name, {"status": "pending", "attempts": 0, "agents": [], "started_at": None, "finished_at": None}
-    )
+    st = s["stages"].setdefault(a.name, dict(NEW_STAGE))
     st["status"] = a.status
     if a.agents:
         st["agents"] = [x.strip() for x in a.agents.split(",") if x.strip()]
@@ -182,15 +178,7 @@ def cmd_complete(a) -> None:
 
 
 def cmd_show(a) -> None:
-    run_id = a.run_id or current_run()
-    if not run_id:
-        sys.exit("no running run found; pass a run id")
-    print(json.dumps(load(run_id), indent=2))
-
-
-def cmd_current(a) -> None:
-    run_id = current_run()
-    print(run_id if run_id else "")
+    print(json.dumps(load(a.run_id), indent=2))
 
 
 def cmd_list(a) -> None:
@@ -241,8 +229,7 @@ def main() -> None:
     p = sub.add_parser("approve"); p.add_argument("run_id"); p.set_defaults(fn=cmd_approve)
     p = sub.add_parser("reject"); p.add_argument("run_id"); p.add_argument("--feedback", required=True); p.set_defaults(fn=cmd_reject)
     p = sub.add_parser("complete"); p.add_argument("run_id"); p.set_defaults(fn=cmd_complete)
-    p = sub.add_parser("show"); p.add_argument("run_id", nargs="?"); p.set_defaults(fn=cmd_show)
-    p = sub.add_parser("current"); p.set_defaults(fn=cmd_current)
+    p = sub.add_parser("show"); p.add_argument("run_id"); p.set_defaults(fn=cmd_show)
     p = sub.add_parser("list"); p.set_defaults(fn=cmd_list)
     p = sub.add_parser("resume-plan"); p.add_argument("run_id"); p.set_defaults(fn=cmd_resume_plan)
 

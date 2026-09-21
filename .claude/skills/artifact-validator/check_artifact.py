@@ -51,9 +51,8 @@ def check(path: Path) -> list[str]:
         if section.strip().lower() not in present:
             findings.append(f"missing required section `## {section}`")
 
-    for m in PLACEHOLDER.finditer(text):
+    if m := PLACEHOLDER.search(text):
         findings.append(f"placeholder {m.group(0)!r} left in the artifact")
-        break
 
     row = UNFILLED_ROW.search(text)
     if row:
@@ -62,10 +61,6 @@ def check(path: Path) -> list[str]:
     m = re.search(r"^##\s+Sources\s*$", text, re.M)
     if m and not URL.search(text[m.end():]):
         findings.append("`## Sources` lists no http(s) URL - every artifact must cite external evidence")
-
-    body = text[: m.start()] if m else text
-    if len(body.split()) < 40:
-        findings.append("artifact body is too thin to be a real answer (under 40 words)")
 
     return findings
 

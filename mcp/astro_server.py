@@ -24,6 +24,8 @@ server = MCPServer(
     ),
 )
 
+STEP_MINUTES = 20  # altitude sampling resolution; 3 samples make an hour
+
 # ephem readdb lines: name,type,RA,Dec,magnitude,epoch
 CATALOG_DB = {
     "M31": "M31,f|G,0:42:44,41:16:8,3.4,2000",
@@ -37,7 +39,6 @@ CATALOG_DB = {
     "M82": "M82,f|G,9:55:52,69:40:47,8.4,2000",
     "M8": "M8,f|U,18:3:37,-24:23:12,6.0,2000",
     "M33": "M33,f|G,1:33:50,30:39:37,5.7,2000",
-    "NGC869": "NGC869,f|U,2:19:0,57:9:0,5.3,2000",
     "NGC7000": "NGC7000,f|U,20:59:17,44:31:44,4.0,2000",
     "ALBIREO": "Albireo,f|D,19:30:43,27:57:35,3.1,2000",
     "VEGA": "Vega,f|S,18:36:56,38:47:1,0.03,2000",
@@ -74,6 +75,7 @@ ALIASES = {
     "TRIANGULUM GALAXY": "M33",
     "NORTH AMERICA NEBULA": "NGC7000",
     "PERSEUS DOUBLE CLUSTER": "DOUBLE CLUSTER",
+    "NGC869": "DOUBLE CLUSTER",
     "GALACTIC CENTER": "MILKY WAY CORE",
 }
 
@@ -158,7 +160,7 @@ def _compute_window(
     }
 
 
-def _samples(dark_start: dt.datetime, dark_end: dt.datetime, step_minutes: int = 20):
+def _samples(dark_start: dt.datetime, dark_end: dt.datetime, step_minutes: int = STEP_MINUTES):
     cur = dark_start
     while cur <= dark_end:
         yield cur
@@ -248,11 +250,10 @@ def moon_info(
         pts = list(_samples(w["dark_start"], w["dark_end"]))
         up = 0
         alts = []
-        probe = _observer(lat, lon, elevation_m)
         body = ephem.Moon()
         for when in pts:
-            probe.date = when
-            body.compute(probe)
+            obs.date = when
+            body.compute(obs)
             alt_deg = float(body.alt) * 180.0 / ephem.pi
             alts.append(alt_deg)
             if alt_deg > 0:
@@ -321,12 +322,11 @@ def object_visibility(
         }
 
     obs = _observer(lat, lon, elevation_m)
-    step = 20
     track = []
     best_alt = -90.0
     best_time = None
     above = 0
-    for when in _samples(w["dark_start"], w["dark_end"], step):
+    for when in _samples(w["dark_start"], w["dark_end"]):
         obs.date = when
         body.compute(obs)
         alt = round(float(body.alt) * 180.0 / ephem.pi, 1)
@@ -343,7 +343,7 @@ def object_visibility(
         if alt >= min_altitude_deg:
             above += 1
 
-    hours_above = round(above * step / 60.0, 2)
+    hours_above = round(above * STEP_MINUTES / 60.0, 2)
     magnitude = None
     try:
         magnitude = round(float(body.mag), 1)

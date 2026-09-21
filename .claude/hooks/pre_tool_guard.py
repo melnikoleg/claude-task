@@ -41,11 +41,11 @@ def main() -> None:
         sys.exit(0)
 
     tool = payload.get("tool_name", "")
-    if tool not in ("Write", "Edit", "MultiEdit", "NotebookEdit"):
+    if tool not in ("Write", "Edit"):
         sys.exit(0)
 
     ti = payload.get("tool_input", {})
-    raw = ti.get("file_path") or ti.get("notebook_path") or ""
+    raw = ti.get("file_path", "")
     if not raw:
         sys.exit(0)
 

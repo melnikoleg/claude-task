@@ -17,17 +17,9 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import state as st  # noqa: E402
 
 
-def note(text: str) -> None:
-    print(
-        json.dumps(
-            {"hookSpecificOutput": {"hookEventName": "PostToolUse", "additionalContext": text}}
-        )
-    )
-
-
 def record_write(payload: dict) -> None:
     ti = payload.get("tool_input", {})
-    raw = ti.get("file_path") or ti.get("notebook_path") or ""
+    raw = ti.get("file_path", "")
     if not raw:
         return
     p = Path(raw)
@@ -41,7 +33,7 @@ def record_write(payload: dict) -> None:
     if len(parts) < 3 or parts[0] != "runs":
         return
     run_id = parts[1]
-    if p.name == "workflow-state.json" or not st.state_path(run_id).is_file():
+    if not st.state_path(run_id).is_file():
         return
 
     s = st.load(run_id)
@@ -51,15 +43,7 @@ def record_write(payload: dict) -> None:
         "updated_at": st.now(),
         "written_by": payload.get("agent_type") or "coordinator",
     }
-    if p.suffix == ".html":
-        stage = s["stages"].setdefault(
-            "html", {"status": "pending", "attempts": 0, "agents": ["html-builder"], "started_at": None, "finished_at": None}
-        )
-        stage["status"] = "done"
-        stage["finished_at"] = st.now()
-        s["status"] = "complete"
     st.save(s)
-    note(f"workflow state updated: {p.name} recorded for run {run_id}")
 
 
 def record_mcp(payload: dict) -> None:
@@ -73,11 +57,10 @@ def record_mcp(payload: dict) -> None:
         "agent": payload.get("agent_type") or "coordinator",
     }
     log = st.RUNS / run_id / "mcp-log.jsonl"
-    log.parent.mkdir(parents=True, exist_ok=True)
     with log.open("a") as fh:
         fh.write(json.dumps(entry, default=str) + "\n")
     s = st.load(run_id)
-    s["mcp_calls"] = s.get("mcp_calls", 0) + 1
+    s["mcp_calls"] += 1
     st.save(s)
 
 
