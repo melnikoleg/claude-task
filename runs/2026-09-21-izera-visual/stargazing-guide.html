@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stargazing - Izera Dark-Sky Park, 2026-11-07</title>
+<style>
+  :root {
+    --bg: #070b18;
+    --panel: #0e1428;
+    --panel-2: #131b33;
+    --line: #26314f;
+    --text: #e8ecf7;
+    --muted: #9aa6c4;
+    --accent: #ffb454;      /* amber: the only bright colour, used sparingly */
+    --red: #ff6b5e;         /* red-light accent for warnings and no-go rules */
+    --ok: #6ee7a8;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background:
+      radial-gradient(1px 1px at 20% 12%, #fff9 50%, transparent 51%),
+      radial-gradient(1px 1px at 68% 8%, #fff7 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 84% 22%, #ffe9c8 50%, transparent 51%),
+      radial-gradient(1px 1px at 12% 34%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 46% 18%, #fff5 50%, transparent 51%),
+      linear-gradient(180deg, #0a1026 0%, var(--bg) 40%);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header { padding: 56px 0 28px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; }
+  .verdict {
+    display: inline-block; margin-top: 18px; padding: 8px 14px; border-radius: 999px;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--line); background: var(--panel-2);
+  }
+  .verdict.go { color: var(--ok); border-color: #2c5c45; }
+  .verdict.nogo { color: var(--red); border-color: #5c2f2c; }
+  section { margin: 0 0 32px; }
+  h2 {
+    font-size: 1.15rem; margin: 0 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--line); color: var(--accent); letter-spacing: 0.02em;
+  }
+  h3 { font-size: 1rem; margin: 22px 0 8px; }
+  p, li { color: var(--text); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .stat .k { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat .v { font-size: 1.3rem; font-weight: 650; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 0.94rem; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  tbody tr:hover { background: var(--panel-2); }
+  ul, ol { padding-left: 22px; }
+  .check { list-style: none; padding-left: 0; }
+  .check li { padding-left: 28px; position: relative; margin-bottom: 6px; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 5px; width: 15px; height: 15px;
+    border: 1px solid var(--line); border-radius: 4px; background: var(--panel-2);
+  }
+  .warn { border-left: 3px solid var(--red); padding-left: 14px; color: #ffd9d4; }
+  a { color: var(--accent); }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  footer ul { font-size: 0.82rem; }
+  @media print {
+    body { background: #fff; color: #111; }
+    .card, .stat { background: #fff; border-color: #ccc; }
+    h2 { color: #111; }
+    a { color: #111; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stargazing - Izera Dark-Sky Park, 2026-11-07</h1>
+    <p class="sub">Two adults and a 9-year-old, visual mode, 35-45 min by local bus from Szklarska Poręba, dark window 18:16-05:08 local (curfew-bounded session 18:16-22:30)</p>
+    <span class="verdict nogo">NO-GO - use backup 2026-11-06</span>
+  </header>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <div class="card">
+      <p><strong>Changed since previous version:</strong> dropped Jupiter and M42 (Orion Nebula) from the Timeline and Targets - both are rejected in targets.md, crossing 20&deg; altitude only after the 22:30 curfew. Timeline now ends on-site at 22:30 (hard curfew, last bus back to Szklarska Poręba) instead of running to the 05:08 dark-window pack-up. Budget table now matches budget.md exactly: 24.61 EUR total, 15.39 EUR headroom. NO-GO (provisional, weather unresolved) verdict and the 2026-11-06 backup night are unchanged from sky-forecast.md.</p>
+      <p><strong>VERDICT: NO-GO (provisional, weather unresolved).</strong> This is not a "least-cloudy pick." No cloud-cover forecast exists yet for any candidate night. Do not travel on this plan alone - re-check the sky before you commit. See <strong>Go / No-Go</strong> below for the exact recheck procedure and deadline.</p>
+      <p>Two adults and a 9-year-old, staying in Szklarska Poręba, want a visual night at Izera Dark-Sky Park with owned 10x50 binoculars, home by 22:30 (last bus, child's curfew). Primary night is <strong>2026-11-07</strong> (backup <strong>2026-11-06</strong>), reached by local bus in 35-45 minutes, total cost 24.61 EUR against a 40 EUR limit. Darkness and moon are excellent on both nights (2.0% and 5.7% illumination, fully moon-free before curfew) and four binocular targets - Albireo, Andromeda Galaxy (M31), Double Cluster, Pleiades (M45) - all clear 20&deg; altitude inside the curfew window, but <strong>cloud cover cannot yet be forecast</strong>, so the single thing that decides go or no-go, sky clarity, is still unknown and must be rechecked closer to the date.</p>
+    </div>
+    <div class="grid" style="margin-top:14px">
+      <div class="stat"><div class="k">Dark window</div><div class="v">18:16-05:08 (curfew: 18:16-22:30)</div></div>
+      <div class="stat"><div class="k">Moon illumination</div><div class="v">2.0% (primary), 5.7% (backup)</div></div>
+      <div class="stat"><div class="k">Mean cloud cover</div><div class="v">Not forecastable yet</div></div>
+      <div class="stat"><div class="k">Drive time</div><div class="v">35-45 min (bus)</div></div>
+      <div class="stat"><div class="k">Total cost</div><div class="v">24.61 EUR (of 40 EUR)</div></div>
+      <div class="stat"><div class="k">Targets</div><div class="v">4</div></div>
+    </div>
+  </section>
+
+  <section id="site"><h2>Site</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Name:</strong> Izera Dark-Sky Park, Poland (exact park point not in the geocoding database; coordinates below are a proxy).</li>
+        <li><strong>Coordinates used:</strong> Świeradów-Zdrój, lat 50.9092, lon 15.34309, elevation 465 m.</li>
+        <li><strong>Drive/transit time:</strong> 35-45 minutes by local bus (PKS line, ~19 km) from Szklarska Poręba, within the 60-minute limit.</li>
+        <li><strong>Access notes:</strong> Protected nature area, free and unrestricted access 24/7, no permit or entry fee required. No parking concern - the party travels on foot/bus, no car.</li>
+        <li><strong>Setup:</strong> Set up within the park along the bus-accessible area near Świeradów-Zdrój; confirm the exact vantage point on arrival using the red-light headlamp to preserve night vision.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="night-and-sky"><h2>Night and Sky</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Primary night:</strong> 2026-11-07. Dark window 18:16-05:08 local (10.88 h); curfew-bounded usable session 18:16-22:30 (4h14m). Moon: waning crescent, 2.0% illumination, moon up 0% of the pre-22:30 session.</li>
+        <li><strong>Backup night:</strong> 2026-11-06. Dark window 18:17-05:07 local (10.83 h); curfew-bounded usable session 18:17-22:30 (4h13m). Moon: waning crescent, 5.7% illumination, moon up 0% of the pre-22:30 session.</li>
+        <li><strong>Cloud cover, wind, temperature, dew point:</strong> NOT-FORECASTABLE for either night. Open-Meteo's forecast API only serves out to ~15-16 days ahead (confirmed by a live call returning "start_date out of allowed range from 2026-06-20 to 2026-10-06"); both candidate nights are 45-47 days out as of today. Zero forecast numbers exist - none have been estimated or guessed.</li>
+        <li><strong>Threshold that still needs checking:</strong> max 40% cloud cover in the curfew-bounded window (18:16/17-22:30) (requirements.md default). This cannot be tested until real numbers exist.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="timeline"><h2>Timeline</h2>
+    <table>
+      <thead><tr><th>Local time</th><th>What happens</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>~17:00</td><td>Leave home (Szklarska Poręba)</td><td>Confirm return bus schedule before leaving - session ends hard at 22:30.</td></tr>
+        <tr><td>~17:35-17:45</td><td>Arrive at site (bus, 35-45 min)</td><td>Within 60-min travel limit.</td></tr>
+        <tr><td>17:45-18:16</td><td>Set up</td><td>Unpack binoculars, warm clothes, seating, thermos; wait for dark window to open at 18:16.</td></tr>
+        <tr><td>18:16-18:40</td><td>Dark adaptation</td><td>20-30 min for eyes to adapt before anything faint is attempted; no white light - use red-light headlamp.</td></tr>
+        <tr><td>18:40-19:10</td><td>Albireo</td><td>Already past its 18:16 peak of 58.7&deg; and sinking in the west-southwest; goes first while still high enough for a steady split.</td></tr>
+        <tr><td>19:15-19:45</td><td>Andromeda Galaxy (M31)</td><td>73-80&deg; up, near zenith; averted vision, attempted after full dark adaptation.</td></tr>
+        <tr><td>19:50-20:20</td><td>Double Cluster</td><td>64-72&deg; up, climbing toward its later peak; brightest target, direct vision.</td></tr>
+        <tr><td>20:30-22:30</td><td>Pleiades (M45)</td><td>33-52&deg; up and still rising; fills the remainder of the session up to the hard 22:30 end time.</td></tr>
+        <tr><td>22:30</td><td>Pack up</td><td>Hard curfew - stop here regardless of what else is visible.</td></tr>
+        <tr><td>~22:30 onward</td><td>Return bus / walk home</td><td>Last bus back to Szklarska Poręba; confirm schedule in advance - see Safety.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="targets"><h2>Targets</h2>
+    <div class="card">
+      <p>Observing order matches the timeline above, primary night 2026-11-07 (backup 2026-11-06 figures differ by at most 0.1&deg; / 1 minute):</p>
+      <ol>
+        <li><strong>Albireo</strong> - peak 58.7&deg; at 18:16, sinking through the session; double star, warm golden-yellow primary next to a fainter steel-blue companion, split with a steady 10x50 hold.</li>
+        <li><strong>Andromeda Galaxy (M31)</strong> - peak 80.5&deg; at 21:36; soft oval smudge with a brighter core, averted vision recommended.</li>
+        <li><strong>Double Cluster (NGC 869 / NGC 884)</strong> - peak 83.6&deg; at 23:16 (still climbing through the session); two dense knots of pinpoint stars, direct vision, no averted vision needed.</li>
+        <li><strong>Pleiades (M45)</strong> - climbs from 15.1&deg; (18:16) to 51.8&deg; (22:16); tight knot of 6-7 bright blue-white stars with dozens of fainter companions filling the binocular field - best binocular target of the night.</li>
+      </ol>
+      <p>Jupiter and Orion Nebula (M42) were requested but are not on this plan: both fail to clear 20&deg; altitude before the 22:30 curfew on every candidate night (targets.md, Rejected Targets).</p>
+    </div>
+  </section>
+
+  <section id="gear"><h2>Gear Checklist</h2>
+    <div class="card">
+      <h3>Optics</h3>
+      <ul class="check">
+        <li>10x50 binoculars (owned) - primary instrument for all four targets</li>
+        <li>Lens cloth (dew/condensation risk cannot be ruled out even without a dew-point forecast)</li>
+      </ul>
+      <h3>Power</h3>
+      <ul class="check">
+        <li>Phone, fully charged before departure</li>
+        <li>Spare phone battery/power bank if available, carried in an inner pocket to stay warm</li>
+      </ul>
+      <h3>Warmth</h3>
+      <ul class="check">
+        <li>Warm clothes (owned), full layers - layer count unconfirmed, no temperature forecast exists yet; revisit once sky-forecast.md is updated</li>
+        <li>Hot drink in a thermos for all three people, to help sustain the ~4h13m-4h14m session</li>
+        <li>Extra blanket to sit/wrap in - the session is short and back-to-back with no long idle stretch to warm up by moving around</li>
+      </ul>
+      <h3>Safety</h3>
+      <ul class="check">
+        <li>Red-light headlamp (buy: Furtiv 100, white/red switchable, 29.99 PLN / ~6.87 EUR, <a href="https://www.decathlon.pl/p/czolowka-mysliwska-furtiv-100-80-lumenow/_/R-p-311715">Decathlon.pl</a>) - preserves night vision between target switches and lights the walking/bus route</li>
+        <li>Fully charged phone (emergency contact, route-finding)</li>
+        <li>Confirm the return bus schedule or walking route back to Szklarska Poręba in advance - the session is timed to the 22:30 curfew and the last bus, not the darkest hour, so there is no slack for a late finish</li>
+      </ul>
+      <h3>Comfort</h3>
+      <ul class="check">
+        <li>Something to sit or kneel on (foam mat, folding stool, or a blanket from home) for short breaks between the four targets</li>
+        <li>Snacks for the 9-year-old between target switches (Albireo -&gt; M31 -&gt; Double Cluster -&gt; Pleiades) - keep them ready rather than planned as a long game</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="budget"><h2>Budget</h2>
+    <table>
+      <thead><tr><th>Category</th><th>Item</th><th>Subtotal</th></tr></thead>
+      <tbody>
+        <tr><td>Travel</td><td>Local bus round trip, 3 people</td><td>11.00 EUR</td></tr>
+        <tr><td>Site fees</td><td>Izera Dark-Sky Park entry</td><td>0.00 EUR</td></tr>
+        <tr><td>Gear</td><td>Red-light headlamp</td><td>6.87 EUR</td></tr>
+        <tr><td>Food and drink</td><td>Thermos drinks + one snack per person, 3 people</td><td>4.50 EUR</td></tr>
+        <tr><td>Contingency</td><td>10% of subtotal, rounded up</td><td>2.24 EUR</td></tr>
+        <tr><td><strong>Total</strong></td><td></td><td><strong>24.61 EUR</strong></td></tr>
+      </tbody>
+    </table>
+    <p>Limit: 40 EUR. Headroom: 15.39 EUR. Within limit: yes.</p>
+  </section>
+
+  <section id="go-no-go"><h2>Go / No-Go</h2>
+    <div class="warn">
+      <p><strong>Current status: NO-GO (provisional).</strong> This is not a weather judgment - no cloud data exists yet to judge. Do not treat the itinerary above as confirmed until the checks below are run and pass.</p>
+    </div>
+    <table>
+      <thead><tr><th>Check</th><th>Threshold</th><th>Call it at</th></tr></thead>
+      <tbody>
+        <tr><td>Open-Meteo hourly forecast re-pull for 2026-11-07 (and 2026-11-06 backup), scoped to the 18:16/17-22:30 curfew window</td><td>Must return real cloud/wind/temp/dew-point numbers, not an out-of-range error</td><td>No earlier than mid-to-late October 2026, once the date falls inside Open-Meteo's ~15-16 day horizon</td></tr>
+        <tr><td>Mean cloud cover in the curfew-bounded window (18:16-22:30 primary, 18:17-22:30 backup)</td><td>&le; 40% (requirements.md threshold)</td><td>Re-verify 24 hours before departure</td></tr>
+        <tr><td>Precipitation probability / wind</td><td>No forecast numbers exist yet - check when the above re-pull runs</td><td>Same 24-hour recheck</td></tr>
+        <tr><td>Temperature / dew point (drives layering, dew risk on binoculars)</td><td>No forecast numbers exist yet - check when the above re-pull runs</td><td>Same 24-hour recheck</td></tr>
+      </tbody>
+    </table>
+    <div class="warn">
+      <p><strong>Abort rule:</strong> If the 24-hour recheck on 2026-11-07 shows mean cloud cover above 40% in the 18:16-22:30 window, do not go that night - switch to the backup, 2026-11-06, and re-run the same 24-hour recheck for that date's 18:17-22:30 window. If both nights fail the 40% threshold, this trip does not go ahead on the 5-7 November window; a new night must be chosen and the full plan (night.md, sky-forecast.md, targets.md) rebuilt for it.</p>
+    </div>
+    <div class="card">
+      <p><strong>Backup night:</strong> 2026-11-06 (5.7% moon illumination, moon up 0% of the pre-22:30 window) - same timeline shape, targets and gear apply, altitude figures differ by at most 0.1&deg; / 1 minute from the primary night.</p>
+      <p><strong>Bottom line:</strong> everything in this document except the sky itself is settled and inside budget. The sky is the one number nobody has yet. Do not leave home until you have checked it.</p>
+    </div>
+  </section>
+
+  <section id="safety"><h2>Safety</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Cold:</strong> ~4h13m-4h14m session outdoors in early November at 465 m elevation. No temperature forecast exists yet - warm clothes are owned but layer count is unconfirmed; add insulating layers once a temperature number is available (re-pull forecast per Go/No-Go above). Hot drinks and blankets are on the checklist.</li>
+        <li><strong>Road / return trip:</strong> The group will be tired at 22:30 when the session ends. Confirm the return bus schedule (or walking route) before departure - the last bus is the binding constraint, not the darkest hour; do not plan on finding a bus on the spot.</li>
+        <li><strong>Isolation:</strong> The park is a free, unrestricted nature area with no on-site staff or facilities. No car means no fallback transport if the bus schedule doesn't align with the 22:30 pack-up - check this in advance.</li>
+        <li><strong>Phone signal:</strong> Not confirmed in any artifact - treat as unknown and keep the phone fully charged with a power bank as backup for navigation and emergency contact.</li>
+        <li><strong>Tell someone:</strong> Let someone at the Szklarska Poręba lodging know the site, the primary/backup night, and the expected 22:30 return time before leaving.</li>
+        <li><strong>Night vision / walking safety:</strong> Use the red-light headlamp, not a white light or bare phone torch, to protect adaptation and to see the route to/from the bus stop in the dark.</li>
+        <li><strong>Curfew is hard:</strong> the whole session is built around being on the 22:30 bus, not around squeezing in more targets. Pleiades runs right up to 22:30 - start packing at 22:30 sharp, don't wait for "just one more look."</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Sources</strong>
+    <h3>requirements.md</h3>
+    <ul>
+      <li>mcp__open-meteo__geocoding(name="Szklarska Poręba", countryCode="PL")</li>
+      <li>mcp__open-meteo__geocoding(name="Świeradów-Zdrój") - lat 50.9092, lon 15.34309, elevation 469 m</li>
+      <li>mcp__open-meteo__elevation(latitude=50.9092, longitude=15.34309) - elevation 465 m</li>
+      <li><a href="https://www.izerskipark.pl/">https://www.izerskipark.pl/</a></li>
+    </ul>
+    <h3>night.md</h3>
+    <ul>
+      <li>mcp__astro__dark_window / mcp__astro__moon_info for 2026-11-05, 2026-11-06, 2026-11-07 (lat=50.9092, lon=15.34309, tz_offset_hours=1, elevation_m=465)</li>
+      <li><a href="https://www.izerskipark.pl/">https://www.izerskipark.pl/</a></li>
+    </ul>
+    <h3>sky-forecast.md</h3>
+    <ul>
+      <li>mcp__open-meteo__weather_forecast(latitude=50.9092, longitude=15.34309, start_date="2026-11-05", end_date="2026-11-07") - error: start_date out of allowed range from 2026-06-20 to 2026-10-06</li>
+      <li>runs/2026-09-21-izera-visual/artifacts/requirements.md</li>
+      <li>runs/2026-09-21-izera-visual/artifacts/night.md</li>
+      <li><a href="https://www.izerskipark.pl/">https://www.izerskipark.pl/</a></li>
+    </ul>
+    <h3>targets.md</h3>
+    <ul>
+      <li>mcp__astro__object_visibility(lat=50.9092, lon=15.34309, object_name=[JUPITER, M42, M45, DOUBLE CLUSTER, M31, ALBIREO], date=[2026-11-06, 2026-11-07], tz_offset_hours=1, elevation_m=465)</li>
+      <li>mcp__astro__list_catalog()</li>
+      <li><a href="https://in-the-sky.org/news.php?id=20270211_12_100">https://in-the-sky.org/news.php?id=20270211_12_100</a></li>
+      <li><a href="https://www.cloudynights.com/topic/886218-best-binoculars-to-use-for-beta-cygni-albireo/">https://www.cloudynights.com/topic/886218-best-binoculars-to-use-for-beta-cygni-albireo/</a></li>
+      <li><a href="http://www.lightandmatter.com/binosky/m31.html">http://www.lightandmatter.com/binosky/m31.html</a></li>
+      <li><a href="https://astronomynow.com/2022/11/09/dont-miss-the-stunning-double-cluster-in-perseus/">https://astronomynow.com/2022/11/09/dont-miss-the-stunning-double-cluster-in-perseus/</a></li>
+      <li><a href="https://www.cloudynights.com/forums/topic/950000-m45-or-the-pleiades-through-a-binocular/">https://www.cloudynights.com/forums/topic/950000-m45-or-the-pleiades-through-a-binocular/</a></li>
+    </ul>
+    <h3>gear.md</h3>
+    <ul>
+      <li><a href="https://www.decathlon.pl/p/czolowka-mysliwska-furtiv-100-80-lumenow/_/R-p-311715">https://www.decathlon.pl/p/czolowka-mysliwska-furtiv-100-80-lumenow/_/R-p-311715</a></li>
+      <li>runs/2026-09-21-izera-visual/artifacts/targets.md</li>
+      <li>runs/2026-09-21-izera-visual/artifacts/sky-forecast.md</li>
+      <li>runs/2026-09-21-izera-visual/artifacts/night.md</li>
+      <li>runs/2026-09-21-izera-visual/artifacts/requirements.md</li>
+    </ul>
+    <h3>budget.md</h3>
+    <ul>
+      <li><a href="https://swieradowzdroj.pl/artykul/2158/rozklad-jazdy-pks-swieradow-zdroj-szklarska-poreba">https://swieradowzdroj.pl/artykul/2158/rozklad-jazdy-pks-swieradow-zdroj-szklarska-poreba</a></li>
+      <li><a href="https://swieradowzdroj.pl/artykul/5181/rozklad-jazdy-i-schemat-linii-nr-2-szklarska-poreba%22">https://swieradowzdroj.pl/artykul/5181/rozklad-jazdy-i-schemat-linii-nr-2-szklarska-poreba%22</a></li>
+      <li><a href="https://www.swieradow.pl/atrakcje/izerski-park-ciemnego-nieba">https://www.swieradow.pl/atrakcje/izerski-park-ciemnego-nieba</a></li>
+      <li><a href="https://swieradowzdroj.pl/2703-swieradowzdroj-izerski-park-ciemnego-nieba">https://swieradowzdroj.pl/2703-swieradowzdroj-izerski-park-ciemnego-nieba</a></li>
+      <li><a href="https://www.decathlon.pl/p/czolowka-mysliwska-furtiv-100-80-lumenow/_/R-p-311715">https://www.decathlon.pl/p/czolowka-mysliwska-furtiv-100-80-lumenow/_/R-p-311715</a></li>
+      <li><a href="https://wise.com/us/currency-converter/eur-to-pln-rate/history">https://wise.com/us/currency-converter/eur-to-pln-rate/history</a></li>
+      <li>runs/2026-09-21-izera-visual/artifacts/gear.md</li>
+      <li>runs/2026-09-21-izera-visual/artifacts/requirements.md</li>
+      <li>runs/2026-09-21-izera-visual/artifacts/night.md</li>
+    </ul>
+    <p>Run id: 2026-09-21-izera-visual. Generated 2026-09-21. Cloud-cover forecast was not available at plan time (Open-Meteo horizon ~15-16 days) - re-check the sky per the Go/No-Go procedure above before departure.</p>
+  </footer>
+</div>
+</body>
+</html>
