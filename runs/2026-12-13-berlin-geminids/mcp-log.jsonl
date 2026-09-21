@@ -1,0 +1,23 @@
+{"at": "2026-09-21T13:42:56Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Berlin, Germany", "count": 1}, "agent": "requirements-formalizer"}
+{"at": "2026-09-21T13:42:59Z", "tool": "mcp__open-meteo__elevation", "args": {"latitude": 52.52437, "longitude": 13.41053}, "agent": "requirements-formalizer"}
+{"at": "2026-09-21T13:44:48Z", "tool": "mcp__astro__dark_window", "args": {"lat": 52.52437, "lon": 13.41053, "date": "2026-12-13", "tz_offset_hours": 1, "elevation_m": 46}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:44:49Z", "tool": "mcp__astro__moon_info", "args": {"lat": 52.52437, "lon": 13.41053, "date": "2026-12-13", "tz_offset_hours": 1, "elevation_m": 46}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:44:50Z", "tool": "mcp__astro__dark_window", "args": {"lat": 52.52437, "lon": 13.41053, "date": "2026-12-14", "tz_offset_hours": 1, "elevation_m": 46}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:44:51Z", "tool": "mcp__astro__moon_info", "args": {"lat": 52.52437, "lon": 13.41053, "date": "2026-12-14", "tz_offset_hours": 1, "elevation_m": 46}, "agent": "night-calculator"}
+{"at": "2026-09-21T13:45:16Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "G\u00fclpe", "countryCode": "DE"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:46:00Z", "tool": "mcp__open-meteo__geocoding", "args": {"name": "Chorin", "countryCode": "DE"}, "agent": "site-scout"}
+{"at": "2026-09-21T13:47:09Z", "tool": "mcp__open-meteo__elevation", "args": {"latitude": [52.786901, 52.734697], "longitude": [12.60948, 12.480468]}, "agent": "site-scout"}
+{"at": "2026-09-21T13:48:31Z", "tool": "mcp__astro__list_catalog", "args": {}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:12Z", "tool": "mcp__astro__list_catalog", "args": {}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:16Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-13", "object_name": "MOON", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:17Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-13", "object_name": "SIRIUS", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:18Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-13", "object_name": "M45", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:19Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-13", "object_name": "M42", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:20Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-13", "object_name": "DOUBLE CLUSTER", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:21Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-13", "object_name": "M31", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:28Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-14", "object_name": "MOON", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:29Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-14", "object_name": "SIRIUS", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:30Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-14", "object_name": "M45", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:31Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-14", "object_name": "M42", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:32Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-14", "object_name": "DOUBLE CLUSTER", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}
+{"at": "2026-09-21T13:49:33Z", "tool": "mcp__astro__object_visibility", "args": {"lat": 52.786901, "lon": 12.60948, "date": "2026-12-14", "object_name": "M31", "tz_offset_hours": 1, "elevation_m": 30}, "agent": "visual-target-planner"}

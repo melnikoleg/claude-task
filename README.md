@@ -107,10 +107,19 @@ python3 scripts/state.py show <run-id>
 
 ## Example runs
 
-`runs/` contains three complete runs kept in version control, covering an
-astrophotography trip, a fixed-site visual night with a retry, and a bright-moon
-request that goes through a rejection and a resume. Each has its input, artifacts,
-validation reports, state and final guide.
+`runs/` holds three complete runs in version control. Each keeps its input,
+artifacts, validation reports, state file, MCP call log and final guide, so you can
+read what the workflow did without re-running it.
+
+| Run | Scenario | What it demonstrates |
+|---|---|---|
+| `2026-09-21-warsaw-astrophoto` | Astrophotography weekend near Warsaw, car, 150 EUR | Full agent set, site search, all 11 gates passing in one cycle. The astro MCP rejects the requested Milky Way core: it never clears 1 degree from Warsaw in October |
+| `2026-09-21-izera-visual` | Fixed site in the Izera Dark-Sky Park, no car, 40 EUR, child in the party | `site-scout` skipped because the site was fixed; the observer rejects the first plan, and the revision trips two gates (stale budget total, targets scheduled past the curfew) that a third validation cycle clears |
+| `2026-12-13-berlin-geminids` | Geminid meteor shower out of Berlin, 25 EUR, cold-weather gap | Interrupted mid-run and resumed from a fresh process: group A was reused untouched, group B onward re-ran. Ends NO-GO pending a weather recheck, because the date is beyond the forecast horizon |
+
+The observer's answers in these runs were supplied from a written scenario rather than
+typed live, but every approval went through the same gate: the plan was shown, a
+decision was given, and `state.py approve` recorded the hash before any guide existed.
 
 ## Troubleshooting
 

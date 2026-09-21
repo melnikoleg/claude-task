@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stargazing - Zootzen, 2026-12-13</title>
+<style>
+  :root {
+    --bg: #070b18;
+    --panel: #0e1428;
+    --panel-2: #131b33;
+    --line: #26314f;
+    --text: #e8ecf7;
+    --muted: #9aa6c4;
+    --accent: #ffb454;      /* amber: the only bright colour, used sparingly */
+    --red: #ff6b5e;         /* red-light accent for warnings and no-go rules */
+    --ok: #6ee7a8;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background:
+      radial-gradient(1px 1px at 20% 12%, #fff9 50%, transparent 51%),
+      radial-gradient(1px 1px at 68% 8%, #fff7 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 84% 22%, #ffe9c8 50%, transparent 51%),
+      radial-gradient(1px 1px at 12% 34%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 46% 18%, #fff5 50%, transparent 51%),
+      linear-gradient(180deg, #0a1026 0%, var(--bg) 40%);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header { padding: 56px 0 28px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; }
+  .verdict {
+    display: inline-block; margin-top: 18px; padding: 8px 14px; border-radius: 999px;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--line); background: var(--panel-2);
+  }
+  .verdict.go { color: var(--ok); border-color: #2c5c45; }
+  .verdict.nogo { color: var(--red); border-color: #5c2f2c; }
+  section { margin: 0 0 32px; }
+  h2 {
+    font-size: 1.15rem; margin: 0 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--line); color: var(--accent); letter-spacing: 0.02em;
+  }
+  h3 { font-size: 1rem; margin: 22px 0 8px; }
+  p, li { color: var(--text); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .stat .k { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat .v { font-size: 1.3rem; font-weight: 650; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 0.94rem; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  tbody tr:hover { background: var(--panel-2); }
+  ul, ol { padding-left: 22px; }
+  .check { list-style: none; padding-left: 0; }
+  .check li { padding-left: 28px; position: relative; margin-bottom: 6px; }
+  .check li::before {
+    content: ""; position: absolute; left: 0; top: 5px; width: 15px; height: 15px;
+    border: 1px solid var(--line); border-radius: 4px; background: var(--panel-2);
+  }
+  .warn { border-left: 3px solid var(--red); padding-left: 14px; color: #ffd9d4; }
+  a { color: var(--accent); }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  footer ul { font-size: 0.82rem; }
+  @media print {
+    body { background: #fff; color: #111; }
+    .card, .stat { background: #fff; border-color: #ccc; }
+    h2 { color: #111; }
+    a { color: #111; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stargazing - Zootzen, 2026-12-13</h1>
+    <p class="sub">Two adults, naked-eye + 8x42 binoculars, Berlin &rarr; Zootzen (Sternenpark Westhavelland), ~69 min drive, dark window 17:59&ndash;06:02</p>
+    <span class="verdict nogo">NO-GO - use backup 2026-12-14</span>
+  </header>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <div class="card">
+      <p>Two adults drive from Berlin to the Zootzen observation site in the Sternenpark
+      Westhavelland to watch the Geminid meteor shower, naked eye, with 8x42 binoculars for
+      a few bright deep-sky targets on the side. Primary night is 2026-12-13, dark window
+      17:59-06:02, moon a thin 20.2%-illuminated crescent that sets at 20:01 and does not
+      interfere with the shower. <strong>This plan is currently NO-GO: no cloud-cover forecast
+      exists yet for this date, and the single decision that will make or break the night is
+      that recheck within 24 hours of departure.</strong></p>
+    </div>
+    <div class="grid" style="margin-top:14px">
+      <div class="stat"><div class="k">Dark window</div><div class="v">17:59 - 06:02 (12.05 h)</div></div>
+      <div class="stat"><div class="k">Moon illumination</div><div class="v">20.2%</div></div>
+      <div class="stat"><div class="k">Mean cloud cover</div><div class="v">Not available</div></div>
+      <div class="stat"><div class="k">Drive time</div><div class="v">69 min each way</div></div>
+      <div class="stat"><div class="k">Total cost</div><div class="v">24.38 EUR</div></div>
+      <div class="stat"><div class="k">Target count</div><div class="v">6</div></div>
+    </div>
+  </section>
+
+  <section id="site">
+    <h2>Site</h2>
+    <div class="card">
+      <p><strong>Zootzen observation site</strong>, Sternenpark Westhavelland (Category 1 point), lat
+      52.786901, lon 12.609480, elevation 30 m. Straight-line distance 61.5 km from Berlin;
+      estimated drive 69 minutes each way. Official, sign-posted, no gate, no fee, with an
+      information kiosk and benches/table for public night use. The final ~300 m of the
+      gravel access track is reserved for agricultural traffic &mdash; park where the public path
+      narrows and walk in from there. No toilet, no lighting, no shelter beyond the car.
+      Berlin's light dome sits low on the southeastern horizon; the clearest, darkest sky is
+      north/northwest, away from it.</p>
+    </div>
+  </section>
+
+  <section id="night-and-sky">
+    <h2>Night and Sky</h2>
+    <div class="card">
+      <ul>
+        <li>Dark window (2026-12-13, local UTC+1): <strong>17:59 - 06:02</strong> (12.05 h).</li>
+        <li>Moon: waxing crescent, age 4.9 d, <strong>20.2% illuminated</strong>, up only 16% of the dark
+        window (rises before dark, sets 20:01, max altitude 12.2 deg). Well under the 40%
+        moon-illumination threshold.</li>
+        <li>Cloud cover: <strong>not available</strong>. Both candidate nights are 83-84 days beyond
+        Open-Meteo's forecast horizon (API accepts start dates only through 2026-10-06 as of
+        today, 2026-09-21). No cloud, wind, temperature, dew-point or humidity numbers exist
+        yet for Zootzen on this date.</li>
+        <li>Cold: no live temperature data either; on physical grounds (mid-December,
+        Brandenburg, after dark) assume <strong>below 5 C</strong> is likely until rechecked.</li>
+        <li>Backup night: <strong>2026-12-14 at Klessener See</strong> (lat 52.734697, lon 12.480468, 75 min
+        drive). Moon illumination 28.4%, up 27% of that night's window (sets 21:15), still
+        under threshold. Also weather-unverified.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>Timeline</h2>
+    <table>
+      <thead><tr><th>Local time</th><th>What happens</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>16:35</td><td>Leave home (Berlin)</td><td>69 min drive to Zootzen</td></tr>
+        <tr><td>17:44</td><td>Arrive at Zootzen, park</td><td>Park where the public gravel path narrows, do not drive the final ~300 m (agricultural traffic only)</td></tr>
+        <tr><td>17:44 - 18:00</td><td>Set up</td><td>Unload blanket/mat, binoculars, thermos; walk in from the parking point</td></tr>
+        <tr><td>18:00 - 18:20</td><td>Dark adaptation</td><td>No optics; let eyes adjust for 20-30 minutes</td></tr>
+        <tr><td>18:20 - 18:40</td><td>The Moon (naked eye), opportunistic</td><td>~12 deg altitude, low southwest, sets ~20:01; look now before it's gone</td></tr>
+        <tr><td>18:30 - 20:30</td><td>Andromeda Galaxy / M31 (binoculars)</td><td>Peaks 78.6 deg at 19:21; highest early, so goes first</td></tr>
+        <tr><td>20:00 - 22:00</td><td>Perseus Double Cluster (binoculars)</td><td>Peaks 85.5 deg at 21:01, near zenith</td></tr>
+        <tr><td>20:00 - 23:00</td><td>Pleiades / M45 (binoculars), interleaved</td><td>Peaks 61.4 deg at 22:21; quick high-value look</td></tr>
+        <tr><td>21:00 onward</td><td>Geminid meteor shower (naked eye) - main event</td><td>Recline, watch the whole sky (not directly at Gemini); radiant climbs all night; expect double-digit meteors/hour by late evening, rising toward 60-100+/hr after midnight</td></tr>
+        <tr><td>22:30 - 01:30</td><td>Orion Nebula / M42 (binoculars), worked in during meteor-watch lulls</td><td>Peaks 31.8 deg at 00:01; only clears 20 deg from ~21:00</td></tr>
+        <tr><td>02:00 onward</td><td>Continue naked-eye Geminid watching</td><td>Radiant highest, rates increase; continue until cold or schedule ends the session</td></tr>
+        <tr><td>Session end (party's choice, cold-limited)</td><td>Pack up</td><td>Summer-jackets-only party &mdash; session length is cold-limited, not schedule-limited; leave when the cold outweighs the meteors</td></tr>
+        <tr><td>+69 min after pack-up</td><td>Arrive home (Berlin)</td><td>Swap driver if either adult is fatigued from the cold/late hour</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="targets">
+    <h2>Targets</h2>
+    <div class="card">
+      <p>Ordered as in the timeline above.</p>
+      <ol>
+        <li><strong>The Moon</strong> (naked eye, opportunistic) - thin crescent, 12 deg altitude, gone by
+        ~20:01. Does not qualify as a built-around target (0 h above 20 deg both nights) but
+        worth the first look.</li>
+        <li><strong>Andromeda Galaxy / M31</strong> (binoculars) - max 78.6 deg at 19:21; elongated
+        grey-white smudge with a brighter core; averted vision helps trace the halo.</li>
+        <li><strong>Perseus Double Cluster</strong> (binoculars) - max 85.5 deg at 21:01; two dense sparkling
+        patches, easily resolved as two separate clusters in one binocular field.</li>
+        <li><strong>Pleiades / M45</strong> (binoculars) - max 61.4 deg at 22:21; tight, sparkling
+        blue-white cluster filling much of the field.</li>
+        <li><strong>Geminid meteor shower</strong> (naked eye, primary target) - radiant near
+        Castor/Pollux in Gemini, high overhead by 02:00-03:00; effectively visible the whole
+        dark window; expect real double-digit rates by late evening, climbing toward the
+        shower's 60-100+/hr dark-sky peak after midnight.</li>
+        <li><strong>Orion Nebula / M42</strong> (binoculars) - max 31.8 deg at 00:01; small greenish-grey
+        glow around the Trapezium, mild averted vision helps.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="gear">
+    <h2>Gear Checklist</h2>
+    <div class="card">
+      <h3>Optics</h3>
+      <ul class="check">
+        <li>8x42 binoculars (owned)</li>
+        <li>Lens/soft cloth (home, no cost) - wipe objectives if they mist; fog risk near open
+        water at Zootzen</li>
+      </ul>
+      <h3>Power</h3>
+      <ul class="check">
+        <li>Charged phone - red-light filter app, navigation, emergency contact (no site
+        lighting/shelter)</li>
+        <li>Keep phone in an inner pocket - batteries lose charge faster below 5 C</li>
+      </ul>
+      <h3>Warmth</h3>
+      <ul class="check">
+        <li>All home layers worn under the summer jackets - thermal base layer, extra jumpers,
+        warmest trousers, hat, gloves, thick socks</li>
+        <li>Blanket or sleeping bag to lie on/wrap in during the reclined meteor watch</li>
+        <li>Thermos of a hot drink</li>
+      </ul>
+      <h3>Safety</h3>
+      <ul class="check">
+        <li>Red light / red-filtered phone screen - preserves dark adaptation</li>
+        <li>Sturdy, grippy footwear - unlit track may be muddy or icy</li>
+        <li>Offline map/coordinates saved before leaving Berlin</li>
+      </ul>
+      <h3>Comfort</h3>
+      <ul class="check">
+        <li>Something to sit or lie on - car blanket, folding chair or mat (Zootzen has benches
+        and a table, but reclined watching benefits from a mat/blanket)</li>
+        <li>Snacks from home</li>
+      </ul>
+      <p>No purchases or rentals: budget covers fuel only, and gear.md found no gaps beyond
+      household items above.</p>
+    </div>
+  </section>
+
+  <section id="budget">
+    <h2>Budget</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Total</td><td>24.38 EUR</td></tr>
+        <tr><td>Limit</td><td>25.00 EUR</td></tr>
+        <tr><td>Headroom</td><td>0.62 EUR</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th>Category</th><th>Item</th><th>Subtotal</th></tr></thead>
+      <tbody>
+        <tr><td>travel</td><td>Fuel, Berlin &lt;-&gt; Zootzen round trip (159.9 km, 9.594 L @ 2.31 EUR/L)</td><td>22.16 EUR</td></tr>
+        <tr><td>site fees</td><td>Zootzen observation point</td><td>0.00 EUR</td></tr>
+        <tr><td>gear</td><td>none (all owned/household)</td><td>0.00 EUR</td></tr>
+        <tr><td>food</td><td>thermos + snacks, household items</td><td>0.00 EUR</td></tr>
+        <tr><td>contingency</td><td>10% of fuel subtotal, rounded up</td><td>2.22 EUR</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="go-no-go">
+    <h2>Go / No-Go</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Threshold</th><th>Call it at</th></tr></thead>
+      <tbody>
+        <tr><td>Cloud cover in dark window (Zootzen, 2026-12-13)</td><td>under 40% mean, per requirements.md</td><td>Recheck Open-Meteo once the date is inside its ~15-16 day forecast window (from approx. 2026-11-29), and again within 24 hours of departure</td></tr>
+        <tr><td>Moon illumination</td><td>under 40%</td><td>Already checked: 20.2%, PASS - no further action needed</td></tr>
+        <tr><td>Access track condition</td><td>passable to the parking point, not blocked or impassably muddy/icy</td><td>Check same day, or have a phone photo/report from someone who has been recently; fall back to walking in further if needed</td></tr>
+        <tr><td>Cold / wind at the site</td><td>party has only summer jackets; if forecast wind chill makes below-5 C conditions dangerous rather than just uncomfortable, shorten or cancel</td><td>Decide at the 24-hour recheck alongside cloud cover</td></tr>
+      </tbody>
+    </table>
+    <div class="warn" style="margin-top:14px">
+      <p><strong>This plan is NO-GO as written.</strong> No cloud-cover number exists yet for 2026-12-13 at
+      Zootzen - the forecast artifact could not query beyond 2026-10-06 as of today
+      (2026-09-21). Do not drive out on the strength of this document alone. Recheck the
+      forecast within 24 hours of departure; if mean cloud cover in the dark window is under
+      40%, this plan is a GO. If it is at or above 40%, or the recheck is still unavailable,
+      fall back to the backup night: <strong>2026-12-14 at Klessener See</strong>, 75 min drive, moon
+      illumination 28.4%, still under threshold. If both nights are forecast over the cloud
+      threshold, abort the trip.</p>
+    </div>
+  </section>
+
+  <section id="safety">
+    <h2>Safety</h2>
+    <div class="warn">
+      <ul>
+        <li><strong>Cold</strong>: summer jackets only, mid-December Brandenburg, likely sub-5 C after dark.
+        Layer everything owned at home, bring a blanket/sleeping bag and a hot thermos. Cold
+        is the expected limit on how long the session runs, not the clock.</li>
+        <li><strong>Drive home while tired</strong>: session may run past 02:00; swap drivers if either adult
+        is cold-fatigued before setting off. 69-minute drive on unlit rural roads.</li>
+        <li><strong>Isolation</strong>: Zootzen has no lighting, no shelter, no toilet, no facilities besides
+        benches and a table. The final approach is an unlit agricultural track that can be
+        muddy or icy.</li>
+        <li><strong>Phone signal</strong>: save an offline map/coordinates before leaving Berlin; do not rely
+        on a live signal at the site.</li>
+        <li><strong>Tell someone</strong>: let a third party know the site (Zootzen, Sternenpark
+        Westhavelland), the plan to return by roughly 03:00-06:30, and to check in if not
+        heard from.</li>
+        <li><strong>Access track</strong>: do not drive the final ~300 m of the gravel track (agricultural
+        traffic only) - park where the public path narrows and walk in.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Sources</strong>
+    <h3>requirements.md</h3>
+    <ul>
+      <li>Two adults, VW Golf ~6 L/100km, 8x42 binoculars owned, no telescope, summer jackets
+      only, 25 EUR budget (fuel only), 80-minute max travel, visual mode, 40% cloud and
+      moon thresholds (defaults).</li>
+    </ul>
+    <h3>sites.md</h3>
+    <ul>
+      <li>Zootzen and Klessener See coordinates and access: <a href="https://www.sternenpark-westhavelland.de/beobachtungspl%C3%A4tze/kategorie-1/">kategorie-1</a> and <a href="https://www.sternenpark-westhavelland.de/beobachtungspl%C3%A4tze/kategorie-2/">kategorie-2</a></li>
+      <li>Reserve darkness statement: <a href="https://www.sternenpark-westhavelland.de/faq/">FAQ</a></li>
+      <li>Dark Sky Reserve designation: <a href="https://darksky.org/places/westhavelland-dark-sky-reserve/">darksky.org</a></li>
+      <li>Reserve overview/distance: <a href="https://www.berlin.de/tourismus/brandenburg/3380613-1098592-naturpark-westhavelland-sternenpark-in-b.html">berlin.de</a></li>
+      <li>mcp__open-meteo__elevation(latitude=[52.786901, 52.734697], longitude=[12.60948, 12.480468]) -&gt; 30 m (Zootzen), 28 m (Klessener See)</li>
+    </ul>
+    <h3>night.md</h3>
+    <ul>
+      <li>mcp__astro__dark_window / mcp__astro__moon_info for 2026-12-13 and 2026-12-14, lat 52.52437, lon 13.41053, tz_offset +1, elevation 46 m</li>
+      <li>Europe/Berlin UTC+1 standard time: <a href="https://www.timeanddate.com/time/zone/germany/berlin">timeanddate.com</a></li>
+    </ul>
+    <h3>sky-forecast.md</h3>
+    <ul>
+      <li>mcp__open-meteo__weather_forecast(...) -&gt; error: start_date out of allowed range (2026-06-20 to 2026-10-06)</li>
+      <li>Open-Meteo forecast horizon documentation: <a href="https://open-meteo.com/en/docs">open-meteo.com/en/docs</a></li>
+    </ul>
+    <h3>targets.md</h3>
+    <ul>
+      <li>mcp__astro__list_catalog(), mcp__astro__object_visibility() for MOON, M45, M42, DOUBLE CLUSTER, M31, SIRIUS at Zootzen coordinates, both candidate nights</li>
+      <li>Geminid 2026 peak/rates: <a href="https://earthsky.org/astronomy-essentials/everything-you-need-to-know-geminid-meteor-shower/">EarthSky</a> and <a href="https://www.timeanddate.com/astronomy/meteor-shower/geminids.html">timeanddate.com</a></li>
+      <li>Pleiades in binoculars: <a href="https://www.cloudynights.com/forums/topic/950000-m45-or-the-pleiades-through-a-binocular/">CloudyNights</a> and <a href="http://www.lightandmatter.com/binosky/m45.html">lightandmatter.com</a></li>
+    </ul>
+    <h3>gear.md</h3>
+    <ul>
+      <li>Cold-weather layering/warm-drinks/battery guidance: <a href="https://earthsky.org/tips/how-to-keep-warm-while-stargazing-in-winter/">EarthSky</a></li>
+    </ul>
+    <h3>budget.md</h3>
+    <ul>
+      <li>Fuel price EUR 2.31/L, Germany, dated 14-Sep-2026: <a href="https://www.globalpetrolprices.com/Germany/gasoline_prices/">globalpetrolprices.com</a></li>
+    </ul>
+    <p>Run id: 2026-12-13-berlin-geminids. Generated 2026-09-21. The cloud-cover forecast for this
+    date did not exist at generation time &mdash; recheck Open-Meteo within 24 hours of departure
+    before treating this plan as a GO.</p>
+  </footer>
+</div>
+</body>
+</html>

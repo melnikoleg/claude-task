@@ -1,0 +1,291 @@
+{
+  "run_id": "2026-12-13-berlin-geminids",
+  "status": "complete",
+  "created_at": "2026-09-21T13:42:32Z",
+  "updated_at": "2026-09-21T15:13:53Z",
+  "request": "Watch Geminid meteor shower night of 13/14 Dec 2026, from Berlin, visual only, budget 25 EUR, max 80min drive",
+  "requirements_confirmed": true,
+  "plan": {
+    "mode": "visual",
+    "site_fixed": false,
+    "stages": [
+      "requirements",
+      "groupA",
+      "groupB",
+      "groupC",
+      "groupD",
+      "validation",
+      "plan",
+      "approval",
+      "html"
+    ]
+  },
+  "stages": {
+    "requirements": {
+      "status": "done",
+      "attempts": 0,
+      "agents": [
+        "requirements-formalizer"
+      ],
+      "started_at": null,
+      "finished_at": "2026-09-21T13:44:29Z"
+    },
+    "groupA": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [
+        "site-scout",
+        "night-calculator"
+      ],
+      "started_at": "2026-09-21T13:44:32Z",
+      "finished_at": "2026-09-21T13:48:12Z"
+    },
+    "groupB": {
+      "status": "done",
+      "attempts": 2,
+      "agents": [
+        "sky-forecaster",
+        "visual-target-planner"
+      ],
+      "started_at": "2026-09-21T13:48:57Z",
+      "finished_at": "2026-09-21T13:50:37Z"
+    },
+    "groupC": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [
+        "gear-planner"
+      ],
+      "started_at": "2026-09-21T13:50:37Z",
+      "finished_at": "2026-09-21T13:52:04Z"
+    },
+    "groupD": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [
+        "budget-aggregator"
+      ],
+      "started_at": "2026-09-21T13:52:04Z",
+      "finished_at": "2026-09-21T13:52:55Z"
+    },
+    "validation": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [],
+      "started_at": "2026-09-21T13:52:55Z",
+      "finished_at": "2026-09-21T15:11:07Z"
+    },
+    "plan": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [],
+      "started_at": "2026-09-21T15:11:07Z",
+      "finished_at": "2026-09-21T15:12:17Z"
+    },
+    "approval": {
+      "status": "done",
+      "attempts": 0,
+      "agents": [],
+      "started_at": null,
+      "finished_at": "2026-09-21T15:12:41Z"
+    },
+    "html": {
+      "status": "done",
+      "attempts": 1,
+      "agents": [],
+      "started_at": "2026-09-21T15:12:41Z",
+      "finished_at": "2026-09-21T15:13:46Z"
+    }
+  },
+  "artifacts": {
+    "input.md": {
+      "path": "runs/2026-12-13-berlin-geminids/input.md",
+      "sha256": "c7813c5b0aa607cce13f8b14bd31f62391977b120a31b2ca7e21f5babe9f6ac5",
+      "updated_at": "2026-09-21T13:42:39Z",
+      "written_by": "coordinator"
+    },
+    "requirements.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/requirements.md",
+      "sha256": "bbc726a07db0383b5fe4c5e09dd0e9a88e4cfd5174896cb007df9f199b446284",
+      "updated_at": "2026-09-21T13:43:32Z",
+      "written_by": "requirements-formalizer"
+    },
+    "night.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/night.md",
+      "sha256": "8fc8eed6e00d813674ed028863c660a8d31acfb9c9e7d5991d4c5247b78c0234",
+      "updated_at": "2026-09-21T13:45:32Z",
+      "written_by": "night-calculator"
+    },
+    "sites.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/sites.md",
+      "sha256": "e8f6a0971fe56fc024106ef995a671d5d003f5d62587381faf39459e2f018832",
+      "updated_at": "2026-09-21T13:47:53Z",
+      "written_by": "site-scout"
+    },
+    "sky-forecast.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/sky-forecast.md",
+      "sha256": "bcf1cbbd418aefd20bfe42ab3888e1f9d2e28192e566c167df6a1ef1491159d8",
+      "updated_at": "2026-09-21T13:49:39Z",
+      "written_by": "sky-forecaster"
+    },
+    "targets.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/targets.md",
+      "sha256": "9e4891d0891005fd544a23bab918d2a6594afcebf00b1b810cb31612d2362797",
+      "updated_at": "2026-09-21T13:50:24Z",
+      "written_by": "visual-target-planner"
+    },
+    "gear.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/gear.md",
+      "sha256": "c365d735c890f8b156c71f511e22f6b3d0af053f6765d6f3bd225317793baf58",
+      "updated_at": "2026-09-21T13:51:53Z",
+      "written_by": "gear-planner"
+    },
+    "budget.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/budget.md",
+      "sha256": "0f1312dbbd61dc4876b810424af174310e93339971b10b733f8b06d3523a62cd",
+      "updated_at": "2026-09-21T13:52:46Z",
+      "written_by": "budget-aggregator"
+    },
+    "report-1.md": {
+      "path": "runs/2026-12-13-berlin-geminids/validation/report-1.md",
+      "sha256": "e6e2345ac699ca373b2fd908a30c12853c93db0f9f71ce15ddb8073ea84f12ce",
+      "updated_at": "2026-09-21T13:54:12Z",
+      "written_by": "coordinator"
+    },
+    "session-plan.md": {
+      "path": "runs/2026-12-13-berlin-geminids/artifacts/session-plan.md",
+      "sha256": "0e25ea33720e4191cfe9e44fb53cffd216ca7c496948fa157898a5f7f11481d0",
+      "updated_at": "2026-09-21T15:12:06Z",
+      "written_by": "session-plan-builder"
+    },
+    "stargazing-guide.html": {
+      "path": "runs/2026-12-13-berlin-geminids/stargazing-guide.html",
+      "sha256": "0b2e7c66001dc3738655d1978ef33d787c18904a9189d02421f6cc147b86dd2d",
+      "updated_at": "2026-09-21T15:13:46Z",
+      "written_by": "html-builder"
+    }
+  },
+  "gates": [
+    {
+      "cycle": 1,
+      "gate": "G1",
+      "result": "PASS",
+      "affected": [
+        "all"
+      ],
+      "finding": "check_artifact.py PASS on all 7 artifacts",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G2",
+      "result": "PASS",
+      "affected": [
+        "budget.md"
+      ],
+      "finding": "24.38 EUR vs 25.00 EUR limit",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G3",
+      "result": "PASS",
+      "affected": [
+        "sites.md"
+      ],
+      "finding": "Zootzen 69min, backup Klessener See 75min, within 80min limit",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G4",
+      "result": "PASS",
+      "affected": [
+        "sky-forecast.md"
+      ],
+      "finding": "Beyond Open-Meteo horizon; NO-GO stated explicitly with named backup night",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G5",
+      "result": "PASS",
+      "affected": [
+        "night.md",
+        "targets.md"
+      ],
+      "finding": "Moon illumination 20.2%/28.4%, both under 40% threshold",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G6",
+      "result": "PASS",
+      "affected": [
+        "targets.md"
+      ],
+      "finding": "All kept targets clear 20deg for well over an hour",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G7",
+      "result": "PASS",
+      "affected": [
+        "targets.md"
+      ],
+      "finding": "No duplicate targets",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G8",
+      "result": "PASS",
+      "affected": [
+        "gear.md"
+      ],
+      "finding": "No gaps; owned gear matches targets; checklist-only mode correct",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G9",
+      "result": "PASS",
+      "affected": [
+        "sites.md",
+        "targets.md",
+        "budget.md"
+      ],
+      "finding": "All recommendations sourced",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G10",
+      "result": "PASS",
+      "affected": [
+        "sites.md"
+      ],
+      "finding": "Zootzen legally usable, documented access/parking",
+      "at": "2026-09-21T15:11:07Z"
+    },
+    {
+      "cycle": 1,
+      "gate": "G11",
+      "result": "PASS",
+      "affected": [
+        "targets.md"
+      ],
+      "finding": "Mode visual honoured throughout",
+      "at": "2026-09-21T15:11:07Z"
+    }
+  ],
+  "validation_cycles": 1,
+  "approval": {
+    "status": "approved",
+    "plan_sha256": "0e25ea33720e4191cfe9e44fb53cffd216ca7c496948fa157898a5f7f11481d0",
+    "feedback": [],
+    "decided_at": "2026-09-21T15:12:41Z"
+  },
+  "mcp_calls": 23
+}
